@@ -8,7 +8,7 @@
 <title>Where will you IndiGo today? · Tilt to Fly</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   @font-face {
     font-family: 'Bauhaus IndiGo';
@@ -85,7 +85,7 @@
     align-items: flex-start;
     z-index: 10;
     pointer-events: none;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 11px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
@@ -105,7 +105,7 @@
   .hud-right .value {
     font-size: 14px;
     color: var(--ink);
-    font-weight: 500;
+    font-weight: 400;
   }
   .hud-right { text-align: right; }
 
@@ -117,7 +117,7 @@
     z-index: 10;
     text-align: center;
     pointer-events: none;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 10px;
     letter-spacing: 0.3em;
     text-transform: uppercase;
@@ -156,7 +156,7 @@
     cursor: pointer;
   }
   #start .mark {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 10px;
     letter-spacing: 0.4em;
     text-transform: uppercase;
@@ -189,7 +189,7 @@
     text-align: center;
     max-width: 280px;
     line-height: 1.5;
-    margin-bottom: 56px;
+    margin-bottom: 24px;
     opacity: 0;
     animation: fadeUp 0.9s 0.6s forwards ease;
   }
@@ -200,6 +200,7 @@
     flex-direction: column;
     align-items: center;
     gap: 18px;
+    margin-top: 30px;
     opacity: 0;
     animation: fadeUp 0.9s 0.9s forwards ease;
   }
@@ -233,18 +234,19 @@
     animation: ping 2.4s 0.4s ease-out infinite;
   }
   .board-prompt .ring-inner {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 9px;
     letter-spacing: 0.2em;
     color: var(--indigo);
     animation: spin-reverse 18s linear infinite;
   }
   .board-prompt .label {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 11px;
     letter-spacing: 0.35em;
     text-transform: uppercase;
     color: var(--ink);
+    margin-top: 20px;
   }
   .board-prompt .sublabel {
     font-family: 'Fraunces', serif;
@@ -267,14 +269,17 @@
 
   .footer-note {
     position: absolute;
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 24px);
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 28px);
     left: 0;
     right: 0;
+    padding: 0 32px;
     text-align: center;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
+    font-family: 'Fraunces', serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 1.5;
+    letter-spacing: 0;
     color: var(--ink-soft);
     opacity: 0;
     animation: fadeUp 0.9s 1.2s forwards ease;
@@ -285,7 +290,7 @@
     background: var(--paper);
   }
   #end .stats {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 10px;
     letter-spacing: 0.3em;
     text-transform: uppercase;
@@ -299,7 +304,7 @@
   #end .stats .num {
     color: var(--indigo);
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
   }
   #end h2 {
     font-family: 'Bauhaus IndiGo', 'Fraunces', serif;
@@ -353,133 +358,20 @@
     color: var(--indigo);
   }
   #end .replay-prompt .tilt-label {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 11px;
     letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--ink);
   }
-  #end .replay-prompt .tilt-sub {
-    font-family: 'Fraunces', serif;
-    font-style: italic;
-    font-size: 12px;
-    color: var(--ink-soft);
-    margin-top: -4px;
-  }
-  /* desktop fallback link */
-  #end .replay {
-    margin-top: 14px;
-    background: none;
-    border: none;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--ink-soft);
+  #end .replay-prompt {
     cursor: pointer;
-    padding: 6px 4px;
-    opacity: 0;
-    transition: opacity 1s 1.4s ease, color 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
   }
-  #end.show .replay { opacity: 0.5; }
-  #end .replay:hover { color: var(--indigo); opacity: 1; }
 
   @keyframes tiltSway {
     0%, 100% { transform: rotate(-12deg); }
     50% { transform: rotate(12deg); }
-  }
-
-  /* Tilt debug panel — visible only on end screen, helps diagnose gyro */
-  .tilt-debug {
-    position: absolute;
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 16px);
-    left: 50%;
-    transform: translateX(-50%);
-    width: min(320px, calc(100% - 40px));
-    background: rgba(26, 31, 74, 0.04);
-    border: 1px solid rgba(26, 31, 74, 0.12);
-    border-radius: 8px;
-    padding: 14px 16px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.05em;
-    color: var(--ink-soft);
-    opacity: 0;
-    transition: opacity 0.5s ease 1.6s;
-    pointer-events: auto;
-  }
-  #end.show .tilt-debug { opacity: 1; }
-  .tilt-debug.hidden-debug { display: none; }
-  .tilt-debug .row {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 4px;
-  }
-  .tilt-debug .row span:first-child {
-    opacity: 0.6;
-    text-transform: uppercase;
-    font-size: 9px;
-  }
-  .tilt-debug .row span:last-child,
-  .tilt-debug #dbg-gyro,
-  .tilt-debug #dbg-gamma,
-  .tilt-debug #dbg-base,
-  .tilt-debug #dbg-delta {
-    color: var(--ink);
-    font-weight: 500;
-    font-variant-numeric: tabular-nums;
-  }
-  .tilt-debug .thresh {
-    color: var(--ink-soft) !important;
-    opacity: 0.5 !important;
-    font-weight: 400 !important;
-    margin-left: 4px;
-  }
-  .tilt-debug .bar {
-    position: relative;
-    height: 4px;
-    background: rgba(26, 31, 74, 0.08);
-    border-radius: 2px;
-    margin: 10px 0 10px;
-    overflow: visible;
-  }
-  .tilt-debug .fill {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    height: 100%;
-    width: 0;
-    background: var(--indigo);
-    border-radius: 2px;
-    transition: width 0.06s linear, background 0.2s ease;
-  }
-  .tilt-debug .fill.ready {
-    background: var(--accent);
-  }
-  .tilt-debug .threshold-line {
-    position: absolute;
-    top: -2px;
-    bottom: -2px;
-    left: 50%;
-    width: 1px;
-    background: rgba(26, 31, 74, 0.3);
-  }
-  .tilt-debug .dbg-close {
-    appearance: none;
-    background: none;
-    border: none;
-    color: var(--ink-soft);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    cursor: pointer;
-    padding: 4px 0 0;
-    text-decoration: underline;
-    opacity: 0.5;
-    width: 100%;
-    text-align: center;
   }
 
   /* visited list */
@@ -526,7 +418,7 @@
   }
   .city-stamp .country {
     display: block;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 9px;
     letter-spacing: 0.4em;
     text-transform: uppercase;
@@ -555,7 +447,7 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 9px;
     letter-spacing: 0.3em;
     text-transform: uppercase;
@@ -598,12 +490,12 @@
 
 <!-- Start screen — tap anywhere to board -->
 <section class="screen" id="start">
-  <div class="mark">An IndiGo Brand Experience</div>
+  <div class="mark"></div>
   <h1>Where will you<br><em>IndiGo</em> today?</h1>
-  <p class="sub">Collect IndiGo's world of 144 destinations,<br>one stop at a time.</p>
+  <p class="sub">Collect IndiGo's world of 144 destinations.</p>
   <div class="board-prompt">
     <div class="pulse-ring">
-      <span class="ring-inner">6E</span>
+      <span class="ring-inner">Fly</span>
     </div>
     <div class="label">Tap Anywhere to Board</div>
     <div class="sublabel">then tilt to take off</div>
@@ -614,29 +506,18 @@
 <!-- End screen -->
 <section class="screen hidden" id="end">
   <div class="stats">
-    Flight ended · <span class="num" id="end-count">0</span> of 144 destinations
+    You travelled · <span class="num" id="end-count">0</span> of 144 destinations
   </div>
   <h2>Where will you<br><em>IndiGo</em> today?</h2>
   <div class="visited" id="visited"></div>
-  <div class="replay-prompt">
+  <div class="replay-prompt" id="replay-prompt">
     <div class="tilt-icon">
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
         <path d="M11 4 L11 15 M7 11 L11 15 L15 11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
         <circle cx="11" cy="11" r="9" stroke="currentColor" stroke-width="0.8" stroke-dasharray="1.5 2"/>
       </svg>
     </div>
-    <div class="tilt-label">Tilt to Fly Again</div>
-    <div class="tilt-sub">a sharp tilt either way</div>
-  </div>
-  <button class="replay" id="replay-btn">or tap here</button>
-  <!-- Debug panel for diagnosing tilt-to-replay -->
-  <div class="tilt-debug" id="tilt-debug">
-    <div class="row"><span>gyro:</span> <span id="dbg-gyro">—</span></div>
-    <div class="row"><span>current γ:</span> <span id="dbg-gamma">—</span></div>
-    <div class="row"><span>baseline:</span> <span id="dbg-base">—</span></div>
-    <div class="row"><span>delta:</span> <span id="dbg-delta">—</span> <span class="thresh">/ 25°</span></div>
-    <div class="bar"><div class="fill" id="dbg-fill"></div><div class="threshold-line"></div></div>
-    <button class="dbg-close" id="dbg-close">hide debug</button>
+    <div class="tilt-label">Tap / Tilt to Fly Again</div>
   </div>
 </section>
 
@@ -2640,6 +2521,13 @@
   let gammaCalibrated = false; // whether we've captured a neutral baseline
   let lastGamma = 0;           // most recent reading
 
+  // Smoothed tilt — exponential moving average of recent samples to filter sensor jitter.
+  // Without smoothing, gamma fluctuates ±2-3° even when phone is held still, causing the
+  // plane to drift in circles. We blend each new reading with the running smoothed value.
+  let smoothedTilt = 0;
+  const TILT_DEAD_ZONE = 0.08;     // any tilt below 8% of full is ignored — prevents drift
+  const TILT_SMOOTH = 0.18;        // 0=no smoothing, 1=instant — lower = more buttery
+
   function onOrient(e) {
     // gamma: left-right tilt in degrees, ~ -90 to 90
     const g = e.gamma;
@@ -2650,8 +2538,8 @@
     const delta = g - neutralGamma;
     // normalize: ±25° from neutral maps to -1..1
     const max = 25;
-    const t = Math.max(-1, Math.min(1, delta / max));
-    tilt = t;
+    const raw = Math.max(-1, Math.min(1, delta / max));
+    tilt = raw;
     usingTouch = false;
   }
 
@@ -2659,6 +2547,8 @@
   function calibrateGyro() {
     neutralGamma = lastGamma || 0;
     gammaCalibrated = true;
+    smoothedTilt = 0; // start each flight with no residual steering momentum
+    tilt = 0;
   }
 
   // touch fallback
@@ -2697,12 +2587,24 @@
     // steering
     let steer = 0;
     if (usingTouch) {
+      // touch and keyboard are already discrete — no smoothing needed
       steer = touchSide || keyDir;
+      smoothedTilt = steer; // keep in sync so switching back to gyro feels continuous
     } else {
-      steer = tilt;
+      // exponential moving average — smooths out sensor jitter
+      smoothedTilt += (tilt - smoothedTilt) * TILT_SMOOTH;
+      // dead zone — ignore tiny tilts so the plane flies straight when held roughly steady
+      if (Math.abs(smoothedTilt) < TILT_DEAD_ZONE) {
+        steer = 0;
+      } else {
+        // remap so dead zone doesn't create a discontinuity at the edges
+        const sign = Math.sign(smoothedTilt);
+        const magnitude = (Math.abs(smoothedTilt) - TILT_DEAD_ZONE) / (1 - TILT_DEAD_ZONE);
+        steer = sign * magnitude;
+      }
     }
 
-    const turnRate = 3.2; // radians/sec at full tilt
+    const turnRate = 2.6; // radians/sec at full tilt — gentler for finer control
     plane.angle += steer * turnRate * dt;
 
     // gradually speed up — full ramp over ~90 seconds
@@ -2965,8 +2867,8 @@
       [-4.464,  13.028],   // tail wing
     ];
 
-    const scale = 1.4;
-    const dotR = 1.6;
+    const scale = 1.6;
+    const dotR = 1.8;
 
     for (const [dx, dy] of dots) {
       ctx.beginPath();
@@ -3009,7 +2911,7 @@
 
     // tiny city label below
     ctx.fillStyle = 'rgba(26, 31, 74, 0.55)';
-    ctx.font = '500 8px "JetBrains Mono", monospace';
+    ctx.font = '400 8px "Space Grotesk", sans-serif';
     ctx.textAlign = 'center';
     ctx.fillText(m.mon.city.toUpperCase(), 0, 32);
 
@@ -3043,7 +2945,7 @@
       // build visited list
       visitedEl.innerHTML = visited.length > 0
         ? visited.map(v => `<span>${v.city}</span>`).join('')
-        : '<span style="font-style:normal;font-family:JetBrains Mono,monospace;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;">Ready for takeoff</span>';
+        : '<span style="font-style:normal;font-family:Space Grotesk,sans-serif;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;">Ready for takeoff</span>';
 
       endScreen.classList.remove('hidden');
       requestAnimationFrame(() => {
@@ -3121,91 +3023,42 @@
     }, 500);
   }
 
-  document.getElementById('replay-btn').addEventListener('click', (e) => {
+  document.getElementById('replay-prompt').addEventListener('click', (e) => {
     e.stopPropagation();
     replay();
   });
+  document.getElementById('replay-prompt').addEventListener('touchend', (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    replay();
+  }, { passive: false });
 
   // Tilt-to-replay: capture a baseline when end screen appears,
   // then trigger when current tilt deviates significantly from THAT baseline.
   let tiltReplayDebounce = 0;
   let endBaselineGamma = null;
 
-  // Debug panel elements
-  const dbgGyro = document.getElementById('dbg-gyro');
-  const dbgGamma = document.getElementById('dbg-gamma');
-  const dbgBase = document.getElementById('dbg-base');
-  const dbgDelta = document.getElementById('dbg-delta');
-  const dbgFill = document.getElementById('dbg-fill');
-  const dbgPanel = document.getElementById('tilt-debug');
-  const dbgClose = document.getElementById('dbg-close');
-  let gyroEverReceived = false;
-
-  if (dbgClose) {
-    dbgClose.addEventListener('click', (e) => {
-      e.stopPropagation();
-      dbgPanel.classList.add('hidden-debug');
-    });
-  }
-
-  // Update debug panel every animation frame so we can see if anything is flowing
-  function updateDebugPanel() {
-    if (!dbgGyro) return;
-    if (!gyroEverReceived) {
-      dbgGyro.textContent = gyroGranted ? 'granted, no events yet' : 'not granted';
-      dbgGyro.style.color = '#c8302e';
-    } else {
-      dbgGyro.textContent = canReplayByTilt ? 'active' : 'gameplay only';
-      dbgGyro.style.color = '';
-    }
-  }
-
   window.addEventListener('deviceorientation', (e) => {
+    if (!canReplayByTilt) return;
     const g = e.gamma;
     if (g === null || g === undefined) return;
-
-    gyroEverReceived = true;
-    if (dbgGamma) dbgGamma.textContent = g.toFixed(1) + '°';
-
-    if (!canReplayByTilt) {
-      if (dbgBase) dbgBase.textContent = '—';
-      if (dbgDelta) dbgDelta.textContent = '—';
-      if (dbgFill) dbgFill.style.width = '0%';
-      return;
-    }
     const now = Date.now();
     if (now < tiltReplayDebounce) return;
 
     // Capture baseline on first orientation event after end screen activates
     if (endBaselineGamma === null) {
       endBaselineGamma = g;
-      if (dbgBase) dbgBase.textContent = g.toFixed(1) + '°';
       return;
     }
 
-    if (dbgBase) dbgBase.textContent = endBaselineGamma.toFixed(1) + '°';
-
     // Trigger on a sharp tilt CHANGE from the captured baseline
     const delta = g - endBaselineGamma;
-    if (dbgDelta) dbgDelta.textContent = delta.toFixed(1) + '°';
-
-    // Visualize delta as a bar (50% center = 0°, ±50% = ±25°)
-    if (dbgFill) {
-      const pct = Math.min(50, Math.abs(delta) / 25 * 50);
-      const fromCenter = delta < 0 ? `right: 50%` : `left: 50%`;
-      dbgFill.style.cssText = `${fromCenter}; width: ${pct}%;`;
-      dbgFill.classList.toggle('ready', Math.abs(delta) > 22);
-    }
-
     if (Math.abs(delta) > 25) {
       tiltReplayDebounce = now + 1000;
       endBaselineGamma = null; // reset for next flight
       replay();
     }
   });
-
-  // Refresh the gyro status indicator periodically
-  setInterval(updateDebugPanel, 250);
 
   // Also accept a shake gesture as fallback (for devices where tilt is held)
   let lastAccel = { x: 0, y: 0, z: 0 };
