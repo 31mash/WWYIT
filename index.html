@@ -1,0 +1,3237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="theme-color" content="#f5f1e8" />
+<title>Where will you IndiGo today? · Tilt to Fly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  @font-face {
+    font-family: 'Bauhaus IndiGo';
+    src: url(data:font/otf;base64,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AEcAbwBBAHMAaABpAHMAaABCAGEAdQBoAGEAdQBzACAASABhAHIAaQBzAGgAIAB3AGsAIABNAGUAZABpAHUAbQBWAGUAcgBzAGkAbwBuACAAMQAuADAAMAAxADsARwBsAHkAcABoAHMAIAAzAC4ANAAuADEAIAAoADMANAAzADYAKQBCAGEAdQBoAGEAdQBzAEkAbgBkAGkARwBvAEEAcwBoAGkAcwBoAEEAZABvAGIAZQAgAFMAeQBzAHQAZQBtAHMAIABJAG4AYwBvAHIAcABvAHIAYQB0AGUAZAAgAFQAaABlACAAZABpAGcAaQB0AGEAbABsAHkAIABlAG4AYwBvAGQAZQBkACAAbQBhAGMAaABpAG4AZQAgAHIAZQBhAGQAYQBiAGwAZQAgAHMAbwBmAHQAdwBhAHIAZQAgAGYAbwByACAAcAByAG8AZAB1AGMAaQBuAGcAIAB0AGgAZQAgACAAVAB5AHAAZQBmAGEAYwBlAHMAIABsAGkAYwBlAG4AcwBlAGQAIAB0AG8AIAB5AG8AdQAgAGkAcwAgAGMAbwBwAHkAcgBpAGcAaAB0AGUAZAAgACgAYwApACAAMQA5ADgAOQAgAEEAZABvAGIAZQAgAFMAeQBzAHQAZQBtAHMALgAgACAAQQBsAGwAIAByAGkAZwBoAHQAcwAgAHIAZQBzAGUAcgB2AGUAZAAuACAAVABoAGkAcwAgAHMAbwBmAHQAdwBhAHIAZQAgAGkAcwAgAHQAaABlACAAcAByAG8AcABlAHIAdAB5ACAAbwBmACAAQQBkAG8AYgBlACAAUwB5AHMAdABlAG0AcwAgACAASQBuAGMAbwByAHAAbwByAGEAdABlAGQAIABhAG4AZAAgAGkAdABzACAAbABpAGMAZQBuAHMAbwByAHMALAAgAGEAbgBkACAAbQBhAHkAIABuAG8AdAAgAGIAZQAgAHIAZQBwAHIAbwBkAHUAYwBlAGQALAAgAHUAcwBlAGQALAAgACAAZABpAHMAcABsAGEAeQBlAGQALAAgAG0AbwBkAGkAZgBpAGUAZAAsACAAZABpAHMAYwBsAG8AcwBlAGQALAAgAG8AcgAgAHQAcgBhAG4AcwBmAGUAcgByAGUAZAAgACAAdwBpAHQAaABvAHUAdAAgAHQAaABlACAAZQB4AHAAcgBlAHMAcwAgACAAdwByAGkAdAB0AGUAbgAgAGEAcABwAHIAbwB2AGEAbAAgAG8AZgAgAEEAZABvAGIAZQAuACAAIAAgAFQAaABlACAAZABpAGcAaQB0AGEAbABsAHkAIABlAG4AYwBvAGQAZQBkACAAbQBhAGMAaABpAG4AZQAgAHIAZQBhAGQAYQBiAGwAZQAgAG8AdQB0AGwAaQBuAGUAIABkAGEAdABhACAAZgBvAHIAIABwAHIAbwBkAHUAYwBpAG4AZwAgACAAdABoAGUAIABUAHkAcABlAGYAYQBjAGUAcwAgAGwAaQBjAGUAbgBzAGUAZAAgAHQAbwAgAHkAbwB1ACAAaQBzACAAYwBvAHAAeQByAGkAZwBoAHQAZQBkACAAKABjACkAIAAxADkAOAAxACAATABpAG4AbwB0AHkAcABlACAAQQBHACAAIABhAG4AZAAvAG8AcgAgAGkAdABzACAAcwB1AGIAcwBpAGQAaQBhAHIAaQBlAHMALgAgAEEAbABsACAAUgBpAGcAaAB0AHMAIABSAGUAcwBlAHIAdgBlAGQALgAgACAAVABoAGkAcwAgAGQAYQB0AGEAIABpAHMAIAB0AGgAZQAgAHAAcgBvAHAAZQByAHQAeQAgAG8AZgAgAEwAaQBuAG8AdAB5AHAAZQAgAEEARwAgAGEAbgBkAC8AbwByACAAaQB0AHMAIABzAHUAYgBzAGkAZABpAGEAcgBpAGUAcwAgACAAYQBuAGQAIABtAGEAeQAgAG4AbwB0ACAAYgBlACAAcgBlAHAAcgBvAGQAdQBjAGUAZAAsACAAdQBzAGUAZAAsACAAZABpAHMAcABsAGEAeQBlAGQALAAgAG0AbwBkAGkAZgBpAGUAZAAsACAAZABpAHMAYwBsAG8AcwBlAGQAIABvAHIAIAAgAHQAcgBhAG4AcwBmAGUAcgByAGUAZAAgAHcAaQB0AGgAbwB1AHQAIAB0AGgAZQAgAGUAeABwAHIAZQBzAHMAIAB3AHIAaQB0AHQAZQBuACAAYQBwAHAAcgBvAHYAYQBsACAAbwBmACAATABpAG4AbwB0AHkAcABlACAAQQBHACAAIABhAG4AZAAvAG8AcgAgAGkAdABzACAAcwB1AGIAcwBpAGQAaQBhAHIAaQBlAHMALgAgAEIAYQB1AGgAYQB1AHMAIABJAG4AZABpAEcAbwAgAEEAcwBo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AG0AbgB3AAUAMv/uADj/7gA5/+4AO//uALj/7gACAJn/pACe/6QABQAy/9sAOP/bADn/7gA7/9sAuP+2AAIAmf+2AJ7/tgAOAED/yQBJ/8kATf/JAGL/yQBt/9sAbv/JAHL/2wB4/9sAev/bAJj/2wCZ/9sAnv/bAKT/2wCv/9sACABA/70ATf/bAGL/2wCY/9sAmf/JAJ7/yQCk/9sAr//bAAgAQP/uAE3/7gBi/+4Aav/uAGz/7gCZ/7YAnv+2AK//7gADAJn/2wCe/9sAr//JAAEAXQAKAAIAmf/uAJ7/7gACARQABAAAAX4CigANAAoAAP/7AAAAAAAAAAAAAAAAAAAAAAAAAAAADwAyABkAAAAAAAAAAAAAAAAADwAZAB4AGQAKACj/+wAZAAAAAP/7AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAAAAD/+wAPABkACgAKACgAAAAUAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAAAAA8AFAAUAAX/9gAA/+wADwAAAAAAFAAZAB4AFAAAACj/+wAUAAAAAAAA//YAAAAAAAAAAAAAAAAAAAAAAAoAGQAZAAAAAAAtAAAAIwAAAAD/8QAZAA8AAAAAACj/7AAUAAAAAAAPABkAHgAAAAAAGQAAAB7/7AABADMAAwALAAwADgAQABUAFgAXABgAHQAeAB8AIQAiACQALAAuAC8AMAAyADMAOAA5ADoAOwA+AEAASABJAEsATQBSAFMAVABVAFsAXABdAF8AYABiAGoAbABtAG4AcQByAHcAeAB6AIUAAQADAIMACAAAAAAAAAAAAAAAAAAAAAcAAAAAAAcAAAACAAAAAAAAAAAABAAHAAgACAAAAAAAAAAAAAgAAwAFAAAAAQAIAAAABwAAAAAAAAAAAAAAAAAAAAYAAAAHAAIAAgAAAAUACQAAAAAAAAAAAAEACAACAAUAAAAAAAIAAAACAAAAAAAAAAAAAAAAAAAABwAKAAAACAAAAAcAAAAAAAAAAAAFAAIAAgAIAAAAAAAAAAAAAAAIAAsACAAAAAIAAgAAAAcAAAAAAAAAAAAAAAAAAAAHAAAAAgAFAAwAAAAAAAUAAgAAAAAAAAAAAAEAAgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAIALgADAAMAAwALAAsAAwAMAAwAAQAOAA4AAwAQABAAAQAVABUAAwAWABYAAQAXABgAAwAeAB8AAwAhACEABgAiACIAAwAkACQAAQAsACwAAwAuAC4AAQAvAC8AAwAwADAAAgAzADMAAwA4ADgABgA5ADkAAwA6ADoAAgA+AD4AAgBAAEAAAQBIAEgAAwBJAEkAAQBLAEsAAQBNAE0AAQBSAFIAAwBTAFMAAQBUAFQAAwBVAFUAAgBbAFsABwBcAF0AAwBfAGAAAgBiAGIAAQBqAGoAAgBsAGwAAQBtAG0AAwBuAG4ABABxAHEAAwByAHIAAgB3AHcABgB4AHgAAgB6AHoACACIAIgABgCZAJkACQCeAJ4ABQ==) format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  :root {
+    --paper: #f5f1e8;
+    --paper-deep: #ebe5d4;
+    --ink: #1a1f4a;
+    --ink-soft: #5a5f7a;
+    --indigo: #1a1f4a;
+    --accent: #c8302e;
+    --grid: rgba(26, 31, 74, 0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: var(--paper);
+    font-family: 'Fraunces', Georgia, serif;
+    color: var(--ink);
+    -webkit-user-select: none;
+    user-select: none;
+    overscroll-behavior: none;
+    touch-action: none;
+  }
+
+  #stage {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background:
+      radial-gradient(ellipse at center, transparent 40%, rgba(26,31,74,0.06) 100%),
+      var(--paper);
+  }
+
+  /* paper grain overlay */
+  #stage::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.12 0 0 0 0 0.29 0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    opacity: 0.5;
+    mix-blend-mode: multiply;
+    z-index: 2;
+  }
+
+  /* HUD */
+  .hud {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: env(safe-area-inset-top, 18px) 22px 0;
+    padding-top: calc(env(safe-area-inset-top, 0px) + 18px);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 10;
+    pointer-events: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+  }
+  .hud.visible { opacity: 1; }
+
+  .hud-left .label,
+  .hud-right .label {
+    font-size: 9px;
+    opacity: 0.6;
+    margin-bottom: 4px;
+  }
+  .hud-left .value,
+  .hud-right .value {
+    font-size: 14px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .hud-right { text-align: right; }
+
+  .current-city {
+    position: fixed;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 28px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    text-align: center;
+    pointer-events: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  .current-city.visible { opacity: 0.7; }
+  .current-city .arrow {
+    display: inline-block;
+    margin: 0 8px;
+    color: var(--accent);
+  }
+
+  /* Screens */
+  .screen {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 32px;
+    background: var(--paper);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .screen.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+  }
+
+  /* Start screen — full-screen tap to board */
+  #start {
+    cursor: pointer;
+  }
+  #start .mark {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 28px;
+    opacity: 0;
+    animation: fadeUp 0.9s 0.2s forwards ease;
+  }
+  #start h1 {
+    font-family: 'Bauhaus IndiGo', 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(40px, 10vw, 64px);
+    line-height: 1.0;
+    letter-spacing: -0.005em;
+    text-align: center;
+    margin-bottom: 14px;
+    opacity: 0;
+    animation: fadeUp 0.9s 0.4s forwards ease;
+  }
+  #start h1 em {
+    font-style: normal;
+    color: var(--indigo);
+    font-weight: 400;
+  }
+  #start .sub {
+    font-family: 'Fraunces', serif;
+    font-size: 15px;
+    font-style: italic;
+    color: var(--ink-soft);
+    text-align: center;
+    max-width: 280px;
+    line-height: 1.5;
+    margin-bottom: 56px;
+    opacity: 0;
+    animation: fadeUp 0.9s 0.6s forwards ease;
+  }
+
+  /* Boarding cue — subtle pulsing prompt */
+  .board-prompt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    opacity: 0;
+    animation: fadeUp 0.9s 0.9s forwards ease;
+  }
+  .board-prompt .pulse-ring {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 1px dashed var(--indigo);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: spin 18s linear infinite;
+  }
+  .board-prompt .pulse-ring::before {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    border: 1px solid var(--indigo);
+    opacity: 0;
+    animation: ping 2.4s ease-out infinite;
+  }
+  .board-prompt .pulse-ring::after {
+    content: '';
+    position: absolute;
+    inset: -16px;
+    border-radius: 50%;
+    border: 1px solid var(--indigo);
+    opacity: 0;
+    animation: ping 2.4s 0.4s ease-out infinite;
+  }
+  .board-prompt .ring-inner {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: var(--indigo);
+    animation: spin-reverse 18s linear infinite;
+  }
+  .board-prompt .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+  .board-prompt .sublabel {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-top: -8px;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  @keyframes spin-reverse {
+    to { transform: rotate(-360deg); }
+  }
+  @keyframes ping {
+    0% { opacity: 0.6; transform: scale(0.95); }
+    100% { opacity: 0; transform: scale(1.4); }
+  }
+
+  .footer-note {
+    position: absolute;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 24px);
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    opacity: 0;
+    animation: fadeUp 0.9s 1.2s forwards ease;
+  }
+
+  /* End screen */
+  #end {
+    background: var(--paper);
+  }
+  #end .stats {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 36px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.8s 0.3s ease;
+  }
+  #end.show .stats { opacity: 1; }
+  #end .stats .num {
+    color: var(--indigo);
+    font-size: 14px;
+    font-weight: 500;
+  }
+  #end h2 {
+    font-family: 'Bauhaus IndiGo', 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(36px, 9vw, 54px);
+    line-height: 1.0;
+    letter-spacing: -0.005em;
+    text-align: center;
+    margin-bottom: 8px;
+    opacity: 0;
+    transition: opacity 1s 0.6s ease, transform 1s 0.6s ease;
+    transform: translateY(12px);
+  }
+  #end.show h2 { opacity: 1; transform: translateY(0); }
+  #end h2 em {
+    font-style: normal;
+    color: var(--indigo);
+    font-weight: 400;
+  }
+  #end .replay-prompt {
+    margin-top: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    opacity: 0;
+    transition: opacity 1s 1.2s ease;
+  }
+  #end.show .replay-prompt { opacity: 1; }
+  #end .replay-prompt .tilt-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px dashed var(--indigo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: tiltSway 2.4s ease-in-out infinite;
+  }
+  #end .replay-prompt .tilt-icon::before {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 1px solid var(--indigo);
+    opacity: 0;
+    animation: ping 2.4s ease-out infinite;
+  }
+  #end .replay-prompt .tilt-icon svg {
+    color: var(--indigo);
+  }
+  #end .replay-prompt .tilt-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+  #end .replay-prompt .tilt-sub {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-top: -4px;
+  }
+  /* desktop fallback link */
+  #end .replay {
+    margin-top: 14px;
+    background: none;
+    border: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    cursor: pointer;
+    padding: 6px 4px;
+    opacity: 0;
+    transition: opacity 1s 1.4s ease, color 0.2s ease;
+  }
+  #end.show .replay { opacity: 0.5; }
+  #end .replay:hover { color: var(--indigo); opacity: 1; }
+
+  @keyframes tiltSway {
+    0%, 100% { transform: rotate(-12deg); }
+    50% { transform: rotate(12deg); }
+  }
+
+  /* Tilt debug panel — visible only on end screen, helps diagnose gyro */
+  .tilt-debug {
+    position: absolute;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 16px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(320px, calc(100% - 40px));
+    background: rgba(26, 31, 74, 0.04);
+    border: 1px solid rgba(26, 31, 74, 0.12);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    color: var(--ink-soft);
+    opacity: 0;
+    transition: opacity 0.5s ease 1.6s;
+    pointer-events: auto;
+  }
+  #end.show .tilt-debug { opacity: 1; }
+  .tilt-debug.hidden-debug { display: none; }
+  .tilt-debug .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 4px;
+  }
+  .tilt-debug .row span:first-child {
+    opacity: 0.6;
+    text-transform: uppercase;
+    font-size: 9px;
+  }
+  .tilt-debug .row span:last-child,
+  .tilt-debug #dbg-gyro,
+  .tilt-debug #dbg-gamma,
+  .tilt-debug #dbg-base,
+  .tilt-debug #dbg-delta {
+    color: var(--ink);
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+  }
+  .tilt-debug .thresh {
+    color: var(--ink-soft) !important;
+    opacity: 0.5 !important;
+    font-weight: 400 !important;
+    margin-left: 4px;
+  }
+  .tilt-debug .bar {
+    position: relative;
+    height: 4px;
+    background: rgba(26, 31, 74, 0.08);
+    border-radius: 2px;
+    margin: 10px 0 10px;
+    overflow: visible;
+  }
+  .tilt-debug .fill {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 0;
+    background: var(--indigo);
+    border-radius: 2px;
+    transition: width 0.06s linear, background 0.2s ease;
+  }
+  .tilt-debug .fill.ready {
+    background: var(--accent);
+  }
+  .tilt-debug .threshold-line {
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: 50%;
+    width: 1px;
+    background: rgba(26, 31, 74, 0.3);
+  }
+  .tilt-debug .dbg-close {
+    appearance: none;
+    background: none;
+    border: none;
+    color: var(--ink-soft);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 4px 0 0;
+    text-decoration: underline;
+    opacity: 0.5;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* visited list */
+  .visited {
+    margin-top: 28px;
+    max-width: 320px;
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    font-size: 14px;
+    font-style: italic;
+    color: var(--ink-soft);
+    line-height: 1.7;
+    opacity: 0;
+    transition: opacity 1s 0.9s ease;
+  }
+  #end.show .visited { opacity: 1; }
+  .visited span { white-space: nowrap; }
+  .visited span:not(:last-child)::after {
+    content: ' · ';
+    color: var(--accent);
+    font-style: normal;
+    margin: 0 4px;
+  }
+
+  /* Monument popup */
+  .city-stamp {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    z-index: 15;
+    font-family: 'Fraunces', serif;
+    font-size: clamp(28px, 7vw, 36px);
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    color: var(--indigo);
+    opacity: 0;
+    pointer-events: none;
+    text-align: center;
+  }
+  .city-stamp.pop {
+    animation: stamp 1.2s ease forwards;
+  }
+  .city-stamp .country {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-style: normal;
+    margin-top: 6px;
+    opacity: 0.7;
+  }
+
+  @keyframes stamp {
+    0% { opacity: 0; transform: translate(-50%, -50%) scale(0.7); }
+    20% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    80% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    100% { opacity: 0; transform: translate(-50%, -50%) scale(1.05); }
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* tilt indicator */
+  .tilt-hint {
+    position: fixed;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 70px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+  }
+  .tilt-hint.visible { opacity: 0.5; }
+  .tilt-hint.fade-out { opacity: 0; }
+</style>
+</head>
+<body>
+
+<div id="stage">
+  <canvas id="game"></canvas>
+</div>
+
+<div class="hud" id="hud">
+  <div class="hud-left">
+    <div class="label">Cities</div>
+    <div class="value"><span id="count">0</span></div>
+  </div>
+  <div class="hud-right">
+    <div class="label">Flight</div>
+    <div class="value" id="flight">6E·001</div>
+  </div>
+</div>
+
+<div class="current-city" id="next-city">
+  <span class="arrow">→</span><span id="next-name">Mumbai</span><span class="arrow">←</span>
+</div>
+
+<div class="tilt-hint" id="tilt-hint">tilt left or right to steer</div>
+
+<div class="city-stamp" id="city-stamp">
+  <span id="stamp-name">Taj Mahal</span>
+  <span class="country" id="stamp-country">Agra · India</span>
+</div>
+
+<!-- Start screen — tap anywhere to board -->
+<section class="screen" id="start">
+  <div class="mark">An IndiGo Brand Experience</div>
+  <h1>Where will you<br><em>IndiGo</em> today?</h1>
+  <p class="sub">Collect IndiGo's world of 144 destinations,<br>one stop at a time.</p>
+  <div class="board-prompt">
+    <div class="pulse-ring">
+      <span class="ring-inner">6E</span>
+    </div>
+    <div class="label">Tap Anywhere to Board</div>
+    <div class="sublabel">then tilt to take off</div>
+  </div>
+  <div class="footer-note"></div>
+</section>
+
+<!-- End screen -->
+<section class="screen hidden" id="end">
+  <div class="stats">
+    Flight ended · <span class="num" id="end-count">0</span> of 144 destinations
+  </div>
+  <h2>Where will you<br><em>IndiGo</em> today?</h2>
+  <div class="visited" id="visited"></div>
+  <div class="replay-prompt">
+    <div class="tilt-icon">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+        <path d="M11 4 L11 15 M7 11 L11 15 L15 11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="11" cy="11" r="9" stroke="currentColor" stroke-width="0.8" stroke-dasharray="1.5 2"/>
+      </svg>
+    </div>
+    <div class="tilt-label">Tilt to Fly Again</div>
+    <div class="tilt-sub">a sharp tilt either way</div>
+  </div>
+  <button class="replay" id="replay-btn">or tap here</button>
+  <!-- Debug panel for diagnosing tilt-to-replay -->
+  <div class="tilt-debug" id="tilt-debug">
+    <div class="row"><span>gyro:</span> <span id="dbg-gyro">—</span></div>
+    <div class="row"><span>current γ:</span> <span id="dbg-gamma">—</span></div>
+    <div class="row"><span>baseline:</span> <span id="dbg-base">—</span></div>
+    <div class="row"><span>delta:</span> <span id="dbg-delta">—</span> <span class="thresh">/ 25°</span></div>
+    <div class="bar"><div class="fill" id="dbg-fill"></div><div class="threshold-line"></div></div>
+    <button class="dbg-close" id="dbg-close">hide debug</button>
+  </div>
+</section>
+
+<script>
+(() => {
+  // ===========================
+  // SETUP
+  // ===========================
+  const canvas = document.getElementById('game');
+  const ctx = canvas.getContext('2d');
+
+  const startScreen = document.getElementById('start');
+  const endScreen = document.getElementById('end');
+  const hud = document.getElementById('hud');
+  const countEl = document.getElementById('count');
+  const flightEl = document.getElementById('flight');
+  const nextCityEl = document.getElementById('next-city');
+  const nextNameEl = document.getElementById('next-name');
+  const tiltHint = document.getElementById('tilt-hint');
+  const stampEl = document.getElementById('city-stamp');
+  const stampNameEl = document.getElementById('stamp-name');
+  const stampCountryEl = document.getElementById('stamp-country');
+  const endCountEl = document.getElementById('end-count');
+  const visitedEl = document.getElementById('visited');
+
+  let W = 0, H = 0, DPR = 1;
+
+  function resize() {
+    DPR = Math.min(window.devicePixelRatio || 1, 2);
+    W = window.innerWidth;
+    H = window.innerHeight;
+    canvas.width = W * DPR;
+    canvas.height = H * DPR;
+    canvas.style.width = W + 'px';
+    canvas.style.height = H + 'px';
+    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  // ===========================
+  // INDIGO DESTINATIONS — 144 total: 98 domestic + 46 international
+  // Iconic monuments get bespoke silhouettes; other cities use a generic dotted marker
+  // ===========================
+  const DESTINATIONS = [
+    // ===== DOMESTIC — 98 cities =====
+    { city: 'Sri Vijaya Puram', country: 'India', name: 'Cellular Jail', draw: drawCellularJail },
+    { city: 'Kadapa', country: 'India', name: 'Kadapa', draw: drawDot },
+    { city: 'Kurnool', country: 'India', name: 'Kurnool', draw: drawDot },
+    { city: 'Rajahmundry', country: 'India', name: 'Rajahmundry', draw: drawDot },
+    { city: 'Tirupati', country: 'India', name: 'Tirumala Temple', draw: drawTirumala },
+    { city: 'Vijayawada', country: 'India', name: 'Vijayawada', draw: drawDot },
+    { city: 'Visakhapatnam', country: 'India', name: 'Visakhapatnam', draw: drawDot },
+    { city: 'Itanagar', country: 'India', name: 'Itanagar', draw: drawDot },
+    { city: 'Dibrugarh', country: 'India', name: 'Dibrugarh', draw: drawDot },
+    { city: 'Guwahati', country: 'India', name: 'Kamakhya Temple', draw: drawKamakhya },
+    { city: 'Jorhat', country: 'India', name: 'Jorhat', draw: drawDot },
+    { city: 'Silchar', country: 'India', name: 'Silchar', draw: drawDot },
+    { city: 'Darbhanga', country: 'India', name: 'Darbhanga', draw: drawDot },
+    { city: 'Gaya', country: 'India', name: 'Mahabodhi Temple', draw: drawMahabodhi },
+    { city: 'Patna', country: 'India', name: 'Patna', draw: drawDot },
+    { city: 'Purnea', country: 'India', name: 'Purnea', draw: drawDot },
+    { city: 'Chandigarh', country: 'India', name: 'Chandigarh', draw: drawOpenHand },
+    { city: 'Jagdalpur', country: 'India', name: 'Jagdalpur', draw: drawDot },
+    { city: 'Raipur', country: 'India', name: 'Raipur', draw: drawDot },
+    { city: 'Diu', country: 'India', name: 'Diu Fort', draw: drawDiuFort },
+    { city: 'Delhi', country: 'India', name: 'Lotus Temple', draw: drawLotus },
+    { city: 'Mopa', country: 'India', name: 'Mopa', draw: drawGoaChurch },
+    { city: 'Panaji', country: 'India', name: 'Panaji', draw: drawGoaChurch },
+    { city: 'Ahmedabad', country: 'India', name: 'Ahmedabad', draw: drawDot },
+    { city: 'Rajkot', country: 'India', name: 'Rajkot', draw: drawDot },
+    { city: 'Surat', country: 'India', name: 'Surat', draw: drawDot },
+    { city: 'Vadodara', country: 'India', name: 'Vadodara', draw: drawDot },
+    { city: 'Bhavnagar', country: 'India', name: 'Bhavnagar', draw: drawDot },
+    { city: 'Dharamshala', country: 'India', name: 'Dharamshala', draw: drawHimalayanStupa },
+    { city: 'Jammu', country: 'India', name: 'Jammu', draw: drawDot },
+    { city: 'Srinagar', country: 'India', name: 'Dal Lake', draw: drawDalLake },
+    { city: 'Deoghar', country: 'India', name: 'Deoghar', draw: drawDot },
+    { city: 'Ranchi', country: 'India', name: 'Ranchi', draw: drawDot },
+    { city: 'Bengaluru', country: 'India', name: 'Bengaluru', draw: drawVidhanaSoudha },
+    { city: 'Belagavi', country: 'India', name: 'Belagavi', draw: drawDot },
+    { city: 'Hubli', country: 'India', name: 'Hubli', draw: drawDot },
+    { city: 'Mangaluru', country: 'India', name: 'Mangaluru', draw: drawDot },
+    { city: 'Mysore', country: 'India', name: 'Mysore Palace', draw: drawMysorePalace },
+    { city: 'Shivamogga', country: 'India', name: 'Shivamogga', draw: drawDot },
+    { city: 'Kannur', country: 'India', name: 'Kannur', draw: drawDot },
+    { city: 'Kochi', country: 'India', name: 'Kochi', draw: drawKochi },
+    { city: 'Kozhikode', country: 'India', name: 'Kozhikode', draw: drawDot },
+    { city: 'Thiruvananthapuram', country: 'India', name: 'Thiruvananthapuram', draw: drawDot },
+    { city: 'Leh', country: 'India', name: 'Leh Palace', draw: drawLehPalace },
+    { city: 'Agatti', country: 'India', name: 'Agatti', draw: drawDot },
+    { city: 'Bhopal', country: 'India', name: 'Bhopal', draw: drawDot },
+    { city: 'Gwalior', country: 'India', name: 'Gwalior Fort', draw: drawGwaliorFort },
+    { city: 'Indore', country: 'India', name: 'Indore', draw: drawDot },
+    { city: 'Jabalpur', country: 'India', name: 'Jabalpur', draw: drawDot },
+    { city: 'Khajuraho', country: 'India', name: 'Khajuraho Temples', draw: drawKhajuraho },
+    { city: 'Rewa', country: 'India', name: 'Rewa', draw: drawDot },
+    { city: 'Aurangabad', country: 'India', name: 'Aurangabad', draw: drawDot },
+    { city: 'Gondia', country: 'India', name: 'Gondia', draw: drawDot },
+    { city: 'Kolhapur', country: 'India', name: 'Kolhapur', draw: drawDot },
+    { city: 'Mumbai', country: 'India', name: 'Gateway of India', draw: drawGateway },
+    { city: 'Nagpur', country: 'India', name: 'Nagpur', draw: drawDeekshabhoomi },
+    { city: 'Nashik', country: 'India', name: 'Nashik', draw: drawDot },
+    { city: 'Navi Mumbai', country: 'India', name: 'Navi Mumbai', draw: drawDot },
+    { city: 'Pune', country: 'India', name: 'Pune', draw: drawShaniwarWada },
+    { city: 'Shirdi', country: 'India', name: 'Shirdi', draw: drawDot },
+    { city: 'Imphal', country: 'India', name: 'Imphal', draw: drawDot },
+    { city: 'Shillong', country: 'India', name: 'Shillong', draw: drawDot },
+    { city: 'Aizawl', country: 'India', name: 'Aizawl', draw: drawDot },
+    { city: 'Dimapur', country: 'India', name: 'Dimapur', draw: drawDot },
+    { city: 'Bhubaneswar', country: 'India', name: 'Konark Sun Temple', draw: drawKonark },
+    { city: 'Jharsuguda', country: 'India', name: 'Jharsuguda', draw: drawDot },
+    { city: 'Pondicherry', country: 'India', name: 'Pondicherry', draw: drawFrenchQuarter },
+    { city: 'Amritsar', country: 'India', name: 'Golden Temple', draw: drawGoldenTemple },
+    { city: 'Jalandhar', country: 'India', name: 'Jalandhar', draw: drawDot },
+    { city: 'Ajmer', country: 'India', name: 'Ajmer Sharif', draw: drawAjmerSharif },
+    { city: 'Bikaner', country: 'India', name: 'Junagarh Fort', draw: drawJunagarh },
+    { city: 'Jaipur', country: 'India', name: 'Hawa Mahal', draw: drawHawaMahal },
+    { city: 'Jaisalmer', country: 'India', name: 'Jaisalmer Fort', draw: drawJaisalmer },
+    { city: 'Jodhpur', country: 'India', name: 'Mehrangarh Fort', draw: drawMehrangarh },
+    { city: 'Udaipur', country: 'India', name: 'City Palace', draw: drawCityPalace },
+    { city: 'Chennai', country: 'India', name: 'Chennai', draw: drawMarinaLighthouse },
+    { city: 'Coimbatore', country: 'India', name: 'Coimbatore', draw: drawDot },
+    { city: 'Madurai', country: 'India', name: 'Meenakshi Temple', draw: drawMeenakshi },
+    { city: 'Salem', country: 'India', name: 'Salem', draw: drawDot },
+    { city: 'Tiruchirappalli', country: 'India', name: 'Tiruchirappalli', draw: drawDot },
+    { city: 'Thoothukudi', country: 'India', name: 'Thoothukudi', draw: drawDot },
+    { city: 'Hyderabad', country: 'India', name: 'Charminar', draw: drawCharminar },
+    { city: 'Agartala', country: 'India', name: 'Agartala', draw: drawDot },
+    { city: 'Dehradun', country: 'India', name: 'Dehradun', draw: drawDot },
+    { city: 'Pantnagar', country: 'India', name: 'Pantnagar', draw: drawDot },
+    { city: 'Agra', country: 'India', name: 'Taj Mahal', draw: drawTaj },
+    { city: 'Ayodhya', country: 'India', name: 'Ram Mandir', draw: drawRamMandir },
+    { city: 'Bareilly', country: 'India', name: 'Bareilly', draw: drawDot },
+    { city: 'Ghaziabad', country: 'India', name: 'Ghaziabad', draw: drawDot },
+    { city: 'Gorakhpur', country: 'India', name: 'Gorakhpur', draw: drawDot },
+    { city: 'Kanpur', country: 'India', name: 'Kanpur', draw: drawDot },
+    { city: 'Lucknow', country: 'India', name: 'Bara Imambara', draw: drawBaraImambara },
+    { city: 'Prayagraj', country: 'India', name: 'Triveni Sangam', draw: drawTriveniSangam },
+    { city: 'Varanasi', country: 'India', name: 'Varanasi Ghats', draw: drawVaranasiGhats },
+    { city: 'Durgapur', country: 'India', name: 'Durgapur', draw: drawDot },
+    { city: 'Kolkata', country: 'India', name: 'Howrah Bridge', draw: drawHowrah },
+    { city: 'Siliguri', country: 'India', name: 'Siliguri', draw: drawDot },
+    { city: 'Noida', country: 'India', name: 'Noida (Jewar)', draw: drawDot },
+
+    // ===== INTERNATIONAL — 46 cities =====
+    { city: 'Baku', country: 'Azerbaijan', name: 'Baku', draw: drawBaku },
+    { city: 'Bahrain', country: 'Bahrain', name: 'Bahrain', draw: drawTreeOfLife },
+    { city: 'Dhaka', country: 'Bangladesh', name: 'Dhaka', draw: drawDhaka },
+    { city: 'Siem Reap', country: 'Cambodia', name: 'Angkor Wat', draw: drawAngkorWat },
+    { city: 'Guangzhou', country: 'China', name: 'Guangzhou', draw: drawCantonTower },
+    { city: 'Tbilisi', country: 'Georgia', name: 'Tbilisi', draw: drawTbilisi },
+    { city: 'Athens', country: 'Greece', name: 'Acropolis', draw: drawAcropolis },
+    { city: 'Hong Kong', country: 'Hong Kong', name: 'Hong Kong', draw: drawHongKong },
+    { city: 'Denpasar', country: 'Indonesia', name: 'Bali', draw: drawBaliTemple },
+    { city: 'Jakarta', country: 'Indonesia', name: 'Jakarta', draw: drawDot },
+    { city: 'Almaty', country: 'Kazakhstan', name: 'Almaty', draw: drawAlmaty },
+    { city: 'Nairobi', country: 'Kenya', name: 'Nairobi', draw: drawNairobi },
+    { city: 'Kuwait City', country: 'Kuwait', name: 'Kuwait City', draw: drawKuwait },
+    { city: 'Kuala Lumpur', country: 'Malaysia', name: 'Petronas Towers', draw: drawPetronas },
+    { city: 'Langkawi', country: 'Malaysia', name: 'Langkawi', draw: drawTropicalIsland },
+    { city: 'Penang', country: 'Malaysia', name: 'Penang', draw: drawTropicalIsland },
+    { city: 'Malé', country: 'Maldives', name: 'Malé', draw: drawTropicalIsland },
+    { city: 'Plaine Magnien', country: 'Mauritius', name: 'Mauritius', draw: drawMauritius },
+    { city: 'Kathmandu', country: 'Nepal', name: 'Kathmandu', draw: drawBoudhanath },
+    { city: 'Amsterdam', country: 'Netherlands', name: 'Amsterdam', draw: drawAmsterdamCanal },
+    { city: 'Muscat', country: 'Oman', name: 'Muscat', draw: drawMuscat },
+    { city: 'Doha', country: 'Qatar', name: 'Doha', draw: drawDoha },
+    { city: 'Dammam', country: 'Saudi Arabia', name: 'Dammam', draw: drawIslamicHeritage },
+    { city: 'Jeddah', country: 'Saudi Arabia', name: 'Jeddah', draw: drawSaudiMinaret },
+    { city: 'Medina', country: 'Saudi Arabia', name: 'Medina', draw: drawSaudiMinaret },
+    { city: 'Riyadh', country: 'Saudi Arabia', name: 'Riyadh', draw: drawSaudiMinaret },
+    { city: 'Mahé', country: 'Seychelles', name: 'Seychelles', draw: drawSeychelles },
+    { city: 'Singapore', country: 'Singapore', name: 'Marina Bay Sands', draw: drawMarina },
+    { city: 'Colombo', country: 'Sri Lanka', name: 'Colombo', draw: drawColombo },
+    { city: 'Jaffna', country: 'Sri Lanka', name: 'Jaffna', draw: drawDot },
+    { city: 'Bangkok', country: 'Thailand', name: 'Bangkok', draw: drawWatPho },
+    { city: 'Krabi', country: 'Thailand', name: 'Krabi', draw: drawTropicalIsland },
+    { city: 'Phuket', country: 'Thailand', name: 'Phuket', draw: drawTropicalIsland },
+    { city: 'Istanbul', country: 'Turkey', name: 'Hagia Sophia', draw: drawHagiaSophia },
+    { city: 'Abu Dhabi', country: 'UAE', name: 'Abu Dhabi', draw: drawAbuDhabi },
+    { city: 'Dubai', country: 'UAE', name: 'Burj Khalifa', draw: drawBurj },
+    { city: 'Fujairah', country: 'UAE', name: 'Fujairah', draw: drawIslamicHeritage },
+    { city: 'Ras Al Khaimah', country: 'UAE', name: 'Ras Al Khaimah', draw: drawIslamicHeritage },
+    { city: 'Sharjah', country: 'UAE', name: 'Sharjah', draw: drawIslamicHeritage },
+    { city: 'London', country: 'United Kingdom', name: 'Big Ben', draw: drawBigBen },
+    { city: 'Manchester', country: 'United Kingdom', name: 'Manchester', draw: drawDot },
+    { city: 'Tashkent', country: 'Uzbekistan', name: 'Tashkent', draw: drawTashkent },
+    { city: 'Hanoi', country: 'Vietnam', name: 'Hanoi', draw: drawHanoiPagoda },
+    { city: 'Ho Chi Minh City', country: 'Vietnam', name: 'Ho Chi Minh City', draw: drawHCMC },
+    { city: 'Tokyo', country: 'Japan', name: 'Mount Fuji', draw: drawFuji },
+    { city: 'Paris', country: 'France', name: 'Eiffel Tower', draw: drawEiffel },
+  ];
+
+  // Generic dotted city marker — used for cities without bespoke landmark art
+  // Renders a small constellation that reads as "a place on the map"
+  function drawDot(ctx) {
+    ctx.fillStyle = '#1a1f4a';
+    // 6-point compass rose pattern in dots
+    const r = 12;
+    for (let i = 0; i < 6; i++) {
+      const a = (i / 6) * Math.PI * 2 - Math.PI / 2;
+      ctx.beginPath();
+      ctx.arc(Math.cos(a) * r, Math.sin(a) * r, 1.6, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    // central dot
+    ctx.beginPath();
+    ctx.arc(0, 0, 2.4, 0, Math.PI * 2);
+    ctx.fill();
+    // outer ring of micro-dots
+    for (let i = 0; i < 12; i++) {
+      const a = (i / 12) * Math.PI * 2;
+      ctx.beginPath();
+      ctx.arc(Math.cos(a) * 22, Math.sin(a) * 22, 1, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  // alias old name for compatibility
+  const MONUMENTS = DESTINATIONS;
+
+  // Each draw function uses a 60x60 canvas centered at (0,0)
+  function strokeStyle(ctx, color = '#1a1f4a') {
+    ctx.strokeStyle = color;
+    ctx.lineWidth = 1.4;
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+  }
+
+  function drawTaj(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    // base
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // platform
+    ctx.moveTo(-18, 14); ctx.lineTo(18, 14);
+    ctx.moveTo(-18, 14); ctx.lineTo(-18, 18);
+    ctx.moveTo(18, 14); ctx.lineTo(18, 18);
+    // main building
+    ctx.moveTo(-12, 14); ctx.lineTo(-12, -2);
+    ctx.lineTo(12, -2); ctx.lineTo(12, 14);
+    // dome
+    ctx.moveTo(-8, -2);
+    ctx.bezierCurveTo(-8, -14, 8, -14, 8, -2);
+    // spire
+    ctx.moveTo(0, -14); ctx.lineTo(0, -20);
+    // minarets
+    ctx.moveTo(-18, 14); ctx.lineTo(-18, -4);
+    ctx.moveTo(-18, -4); ctx.lineTo(-16, -6); ctx.lineTo(-18, -8); ctx.lineTo(-20, -6); ctx.closePath();
+    ctx.moveTo(18, 14); ctx.lineTo(18, -4);
+    ctx.moveTo(18, -4); ctx.lineTo(20, -6); ctx.lineTo(18, -8); ctx.lineTo(16, -6); ctx.closePath();
+    ctx.stroke();
+    // arch
+    ctx.beginPath();
+    ctx.moveTo(-4, 14);
+    ctx.bezierCurveTo(-4, 6, 4, 6, 4, 14);
+    ctx.stroke();
+  }
+
+  function drawGateway(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // main arch structure
+    ctx.moveTo(-18, 18); ctx.lineTo(-18, -4);
+    ctx.moveTo(18, 18); ctx.lineTo(18, -4);
+    ctx.moveTo(-18, -4); ctx.lineTo(18, -4);
+    // central dome
+    ctx.moveTo(-10, -4);
+    ctx.bezierCurveTo(-10, -16, 10, -16, 10, -4);
+    // big arch
+    ctx.moveTo(-10, 18);
+    ctx.bezierCurveTo(-10, 0, 10, 0, 10, 18);
+    // side details
+    ctx.moveTo(-14, -4); ctx.lineTo(-14, 8);
+    ctx.moveTo(14, -4); ctx.lineTo(14, 8);
+    // top tip
+    ctx.moveTo(0, -16); ctx.lineTo(0, -20);
+    ctx.stroke();
+  }
+
+  function drawCharminar(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // base
+    ctx.moveTo(-16, 18); ctx.lineTo(-16, 0);
+    ctx.lineTo(16, 0); ctx.lineTo(16, 18);
+    // arch
+    ctx.moveTo(-8, 18);
+    ctx.bezierCurveTo(-8, 6, 8, 6, 8, 18);
+    // four minarets
+    [-16, 16].forEach(x => {
+      ctx.moveTo(x, 0); ctx.lineTo(x, -14);
+      ctx.moveTo(x - 2, -14); ctx.lineTo(x + 2, -14);
+      ctx.moveTo(x - 2, -14);
+      ctx.bezierCurveTo(x - 2, -18, x + 2, -18, x + 2, -14);
+      ctx.moveTo(x, -18); ctx.lineTo(x, -22);
+    });
+    // top dome
+    ctx.moveTo(-6, 0);
+    ctx.bezierCurveTo(-6, -8, 6, -8, 6, 0);
+    ctx.stroke();
+  }
+
+  function drawHawaMahal(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // tiered pyramid structure
+    ctx.moveTo(-20, 18); ctx.lineTo(-20, 8); ctx.lineTo(20, 8); ctx.lineTo(20, 18);
+    ctx.moveTo(-16, 8); ctx.lineTo(-16, 0); ctx.lineTo(16, 0); ctx.lineTo(16, 8);
+    ctx.moveTo(-10, 0); ctx.lineTo(-10, -8); ctx.lineTo(10, -8); ctx.lineTo(10, 0);
+    // small windows pattern
+    ctx.moveTo(-14, 14); ctx.lineTo(-14, 10);
+    ctx.moveTo(-6, 14); ctx.lineTo(-6, 10);
+    ctx.moveTo(2, 14); ctx.lineTo(2, 10);
+    ctx.moveTo(10, 14); ctx.lineTo(10, 10);
+    // top domes
+    [-10, 0, 10].forEach(x => {
+      ctx.moveTo(x - 3, -8);
+      ctx.bezierCurveTo(x - 3, -14, x + 3, -14, x + 3, -8);
+      ctx.moveTo(x, -14); ctx.lineTo(x, -16);
+    });
+    ctx.stroke();
+  }
+
+  function drawLotus(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // base
+    ctx.moveTo(-16, 18); ctx.lineTo(-16, 12); ctx.lineTo(16, 12); ctx.lineTo(16, 18);
+    // lotus petals
+    ctx.moveTo(-14, 12);
+    ctx.bezierCurveTo(-14, -2, -8, -10, 0, -16);
+    ctx.bezierCurveTo(8, -10, 14, -2, 14, 12);
+    // inner petals
+    ctx.moveTo(-8, 12);
+    ctx.bezierCurveTo(-8, 0, -4, -6, 0, -10);
+    ctx.bezierCurveTo(4, -6, 8, 0, 8, 12);
+    // center petal
+    ctx.moveTo(0, 12); ctx.lineTo(0, -10);
+    ctx.stroke();
+  }
+
+  function drawHowrah(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    // bridge deck
+    ctx.moveTo(-24, 8); ctx.lineTo(24, 8);
+    ctx.moveTo(-24, 12); ctx.lineTo(24, 12);
+    // towers
+    ctx.moveTo(-16, 12); ctx.lineTo(-16, -16);
+    ctx.moveTo(16, 12); ctx.lineTo(16, -16);
+    // cross bracing
+    ctx.moveTo(-16, -16); ctx.lineTo(16, -16);
+    ctx.moveTo(-16, -8); ctx.lineTo(16, -8);
+    ctx.moveTo(-16, -16); ctx.lineTo(-12, -8); ctx.lineTo(-16, 0); ctx.lineTo(-12, 8);
+    ctx.moveTo(16, -16); ctx.lineTo(12, -8); ctx.lineTo(16, 0); ctx.lineTo(12, 8);
+    ctx.moveTo(-12, -8); ctx.lineTo(-8, 0); ctx.lineTo(-12, 8);
+    ctx.moveTo(12, -8); ctx.lineTo(8, 0); ctx.lineTo(12, 8);
+    // water
+    ctx.moveTo(-22, 16); ctx.lineTo(-18, 18); ctx.moveTo(-12, 16); ctx.lineTo(-8, 18);
+    ctx.moveTo(2, 16); ctx.lineTo(6, 18); ctx.moveTo(12, 16); ctx.lineTo(16, 18);
+    ctx.stroke();
+  }
+
+  function drawBurj(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // tiered tower
+    ctx.moveTo(-12, 18); ctx.lineTo(-10, 8); ctx.lineTo(-8, -2); ctx.lineTo(-6, -10); ctx.lineTo(-4, -16); ctx.lineTo(-2, -20);
+    ctx.moveTo(12, 18); ctx.lineTo(10, 8); ctx.lineTo(8, -2); ctx.lineTo(6, -10); ctx.lineTo(4, -16); ctx.lineTo(2, -20);
+    // tier lines
+    ctx.moveTo(-10, 8); ctx.lineTo(10, 8);
+    ctx.moveTo(-8, -2); ctx.lineTo(8, -2);
+    ctx.moveTo(-6, -10); ctx.lineTo(6, -10);
+    ctx.moveTo(-4, -16); ctx.lineTo(4, -16);
+    ctx.moveTo(-2, -20); ctx.lineTo(2, -20);
+    // spire
+    ctx.moveTo(0, -20); ctx.lineTo(0, -26);
+    ctx.stroke();
+  }
+
+  function drawMarina(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-24, 18); ctx.lineTo(24, 18);
+    // three towers (slightly tilted top)
+    [-16, 0, 16].forEach(x => {
+      ctx.moveTo(x - 4, 18); ctx.lineTo(x - 4, -8);
+      ctx.moveTo(x + 4, 18); ctx.lineTo(x + 4, -8);
+    });
+    // sky park (top deck connecting all three)
+    ctx.moveTo(-22, -8); ctx.lineTo(22, -8);
+    ctx.moveTo(-22, -12); ctx.lineTo(22, -12);
+    ctx.moveTo(-22, -8); ctx.lineTo(-22, -12);
+    ctx.moveTo(22, -8); ctx.lineTo(22, -12);
+    // boat curve on top
+    ctx.moveTo(-22, -12);
+    ctx.bezierCurveTo(-10, -16, 10, -16, 22, -12);
+    ctx.stroke();
+  }
+
+  function drawEiffel(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // legs
+    ctx.moveTo(-14, 18); ctx.lineTo(-4, -4);
+    ctx.moveTo(14, 18); ctx.lineTo(4, -4);
+    // top section
+    ctx.moveTo(-4, -4); ctx.lineTo(-2, -16); ctx.lineTo(0, -22);
+    ctx.moveTo(4, -4); ctx.lineTo(2, -16); ctx.lineTo(0, -22);
+    // platforms
+    ctx.moveTo(-10, 8); ctx.lineTo(10, 8);
+    ctx.moveTo(-6, 0); ctx.lineTo(6, 0);
+    ctx.moveTo(-4, -4); ctx.lineTo(4, -4);
+    ctx.moveTo(-2, -16); ctx.lineTo(2, -16);
+    // arch at bottom
+    ctx.moveTo(-10, 8);
+    ctx.bezierCurveTo(-10, 14, 10, 14, 10, 8);
+    ctx.stroke();
+  }
+
+  function drawBigBen(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // tower base
+    ctx.moveTo(-8, 18); ctx.lineTo(-8, -8);
+    ctx.lineTo(8, -8); ctx.lineTo(8, 18);
+    // clock face
+    ctx.moveTo(-5, -2);
+    ctx.bezierCurveTo(-5, -8, 5, -8, 5, -2);
+    ctx.bezierCurveTo(5, 4, -5, 4, -5, -2);
+    // clock hands
+    ctx.moveTo(0, -2); ctx.lineTo(0, -5);
+    ctx.moveTo(0, -2); ctx.lineTo(3, -2);
+    // top section
+    ctx.moveTo(-8, -8); ctx.lineTo(-6, -12); ctx.lineTo(6, -12); ctx.lineTo(8, -8);
+    ctx.moveTo(-6, -12); ctx.lineTo(-4, -18); ctx.lineTo(4, -18); ctx.lineTo(6, -12);
+    // spire
+    ctx.moveTo(-4, -18); ctx.lineTo(0, -24); ctx.lineTo(4, -18);
+    ctx.moveTo(0, -24); ctx.lineTo(0, -28);
+    ctx.stroke();
+  }
+
+  function drawFuji(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    // mountain
+    ctx.moveTo(-24, 18);
+    ctx.lineTo(-8, -8);
+    ctx.lineTo(-4, -10);
+    ctx.lineTo(4, -10);
+    ctx.lineTo(8, -8);
+    ctx.lineTo(24, 18);
+    // snow cap line
+    ctx.moveTo(-10, -4);
+    ctx.bezierCurveTo(-6, -2, 6, -2, 10, -4);
+    // wave pattern at base
+    ctx.moveTo(-22, 18);
+    ctx.bezierCurveTo(-18, 14, -14, 18, -10, 16);
+    ctx.moveTo(10, 16);
+    ctx.bezierCurveTo(14, 18, 18, 14, 22, 18);
+    // sun
+    ctx.moveTo(14, -16);
+    ctx.bezierCurveTo(14, -22, 22, -22, 22, -16);
+    ctx.bezierCurveTo(22, -10, 14, -10, 14, -16);
+    ctx.stroke();
+  }
+
+  function drawPetronas(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // two towers
+    [-10, 10].forEach(x => {
+      ctx.moveTo(x - 4, 18); ctx.lineTo(x - 4, -14);
+      ctx.moveTo(x + 4, 18); ctx.lineTo(x + 4, -14);
+      // top tapered
+      ctx.moveTo(x - 4, -14); ctx.lineTo(x - 2, -18); ctx.lineTo(x + 2, -18); ctx.lineTo(x + 4, -14);
+      // spire
+      ctx.moveTo(x, -18); ctx.lineTo(x, -24);
+      // floor lines
+      for (let y = 12; y > -12; y -= 6) {
+        ctx.moveTo(x - 4, y); ctx.lineTo(x + 4, y);
+      }
+    });
+    // skybridge
+    ctx.moveTo(-6, -2); ctx.lineTo(6, -2);
+    ctx.moveTo(-6, 0); ctx.lineTo(6, 0);
+    ctx.stroke();
+  }
+
+  // ===== Indian iconic landmarks =====
+
+  function drawGoldenTemple(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    // water reflection line
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    ctx.moveTo(-20, 14); ctx.lineTo(-12, 14);
+    ctx.moveTo(12, 14); ctx.lineTo(20, 14);
+    // base platform
+    ctx.moveTo(-12, 14); ctx.lineTo(12, 14);
+    ctx.moveTo(-12, 14); ctx.lineTo(-12, 4);
+    ctx.lineTo(12, 4); ctx.lineTo(12, 14);
+    // main shrine body
+    ctx.moveTo(-8, 4); ctx.lineTo(-8, -6); ctx.lineTo(8, -6); ctx.lineTo(8, 4);
+    // dome
+    ctx.moveTo(-7, -6);
+    ctx.bezierCurveTo(-7, -16, 7, -16, 7, -6);
+    // small corner domes
+    ctx.moveTo(-12, 4); ctx.bezierCurveTo(-12, -2, -8, -2, -8, 4);
+    ctx.moveTo(12, 4); ctx.bezierCurveTo(12, -2, 8, -2, 8, 4);
+    // finial
+    ctx.moveTo(0, -16); ctx.lineTo(0, -20);
+    ctx.stroke();
+  }
+
+  function drawKonark(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // chariot wheel (sun temple is famous for its stone wheels)
+    ctx.moveTo(-14, 18); ctx.bezierCurveTo(-14, 4, 14, 4, 14, 18);
+    // wheel spokes
+    for (let i = 0; i < 8; i++) {
+      const a = -Math.PI / 2 + (i / 7) * Math.PI;
+      const x = Math.cos(a) * 12;
+      const y = Math.sin(a) * 12 + 6;
+      ctx.moveTo(0, 6);
+      ctx.lineTo(x, y);
+    }
+    // hub
+    ctx.moveTo(-2, 4); ctx.bezierCurveTo(-2, 8, 2, 8, 2, 4); ctx.bezierCurveTo(2, 0, -2, 0, -2, 4);
+    // shikara above
+    ctx.moveTo(-6, 4); ctx.lineTo(-4, -6); ctx.lineTo(0, -16); ctx.lineTo(4, -6); ctx.lineTo(6, 4);
+    ctx.moveTo(0, -16); ctx.lineTo(0, -20);
+    ctx.stroke();
+  }
+
+  function drawMysorePalace(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // wide base palace
+    ctx.moveTo(-20, 18); ctx.lineTo(-20, 6); ctx.lineTo(20, 6); ctx.lineTo(20, 18);
+    // arched entrance
+    ctx.moveTo(-4, 18); ctx.bezierCurveTo(-4, 10, 4, 10, 4, 18);
+    // central tower with onion dome
+    ctx.moveTo(-6, 6); ctx.lineTo(-6, -6); ctx.lineTo(6, -6); ctx.lineTo(6, 6);
+    ctx.moveTo(-6, -6); ctx.bezierCurveTo(-6, -16, 6, -16, 6, -6);
+    ctx.moveTo(0, -16); ctx.lineTo(0, -20);
+    // smaller side domes
+    [-14, 14].forEach(x => {
+      ctx.moveTo(x - 3, 6); ctx.lineTo(x - 3, 0); ctx.lineTo(x + 3, 0); ctx.lineTo(x + 3, 6);
+      ctx.moveTo(x - 3, 0); ctx.bezierCurveTo(x - 3, -6, x + 3, -6, x + 3, 0);
+      ctx.moveTo(x, -6); ctx.lineTo(x, -10);
+    });
+    ctx.stroke();
+  }
+
+  function drawMeenakshi(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // gopuram (south Indian temple tower) — tiered pyramid
+    ctx.moveTo(-14, 18); ctx.lineTo(-14, 14);
+    ctx.lineTo(-12, 14); ctx.lineTo(-12, 8);
+    ctx.lineTo(-10, 8); ctx.lineTo(-10, 2);
+    ctx.lineTo(-8, 2); ctx.lineTo(-8, -4);
+    ctx.lineTo(-6, -4); ctx.lineTo(-6, -10);
+    ctx.lineTo(-4, -10); ctx.lineTo(-4, -16);
+    // mirror right side
+    ctx.moveTo(14, 18); ctx.lineTo(14, 14);
+    ctx.lineTo(12, 14); ctx.lineTo(12, 8);
+    ctx.lineTo(10, 8); ctx.lineTo(10, 2);
+    ctx.lineTo(8, 2); ctx.lineTo(8, -4);
+    ctx.lineTo(6, -4); ctx.lineTo(6, -10);
+    ctx.lineTo(4, -10); ctx.lineTo(4, -16);
+    // top
+    ctx.moveTo(-4, -16); ctx.lineTo(4, -16);
+    ctx.moveTo(0, -16); ctx.lineTo(0, -20);
+    // main entrance arch
+    ctx.moveTo(-4, 18); ctx.bezierCurveTo(-4, 8, 4, 8, 4, 18);
+    ctx.stroke();
+  }
+
+  function drawMehrangarh(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // hill base
+    ctx.moveTo(-22, 16);
+    ctx.bezierCurveTo(-12, 8, 12, 8, 22, 16);
+    // fort walls — irregular stepped
+    ctx.moveTo(-18, 12); ctx.lineTo(-18, 4); ctx.lineTo(-14, 4); ctx.lineTo(-14, 0);
+    ctx.lineTo(-8, 0); ctx.lineTo(-8, -6); ctx.lineTo(8, -6); ctx.lineTo(8, 0);
+    ctx.lineTo(14, 0); ctx.lineTo(14, 4); ctx.lineTo(18, 4); ctx.lineTo(18, 12);
+    // crenellations
+    for (let x = -16; x < 16; x += 4) {
+      ctx.moveTo(x, -6); ctx.lineTo(x, -8); ctx.lineTo(x + 2, -8); ctx.lineTo(x + 2, -6);
+    }
+    // small flag
+    ctx.moveTo(0, -8); ctx.lineTo(0, -14); ctx.lineTo(4, -12); ctx.lineTo(0, -10);
+    ctx.stroke();
+  }
+
+  function drawCityPalace(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // lake water lines
+    ctx.moveTo(-22, 14); ctx.lineTo(-14, 14);
+    ctx.moveTo(14, 14); ctx.lineTo(22, 14);
+    // palace base
+    ctx.moveTo(-16, 14); ctx.lineTo(-16, 0); ctx.lineTo(16, 0); ctx.lineTo(16, 14);
+    // towers with cupolas
+    [-12, 0, 12].forEach(x => {
+      ctx.moveTo(x - 3, 0); ctx.lineTo(x - 3, -8); ctx.lineTo(x + 3, -8); ctx.lineTo(x + 3, 0);
+      // cupola
+      ctx.moveTo(x - 3, -8); ctx.bezierCurveTo(x - 3, -14, x + 3, -14, x + 3, -8);
+      ctx.moveTo(x, -14); ctx.lineTo(x, -16);
+    });
+    // arches in base
+    ctx.moveTo(-10, 14); ctx.bezierCurveTo(-10, 8, -6, 8, -6, 14);
+    ctx.moveTo(-2, 14); ctx.bezierCurveTo(-2, 8, 2, 8, 2, 14);
+    ctx.moveTo(6, 14); ctx.bezierCurveTo(6, 8, 10, 8, 10, 14);
+    ctx.stroke();
+  }
+
+  function drawJunagarh(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // fort walls with bastions
+    ctx.moveTo(-18, 18); ctx.lineTo(-18, 0); ctx.lineTo(-14, 0); ctx.lineTo(-14, -6);
+    ctx.lineTo(-10, -6); ctx.lineTo(-10, 0); ctx.lineTo(10, 0); ctx.lineTo(10, -6);
+    ctx.lineTo(14, -6); ctx.lineTo(14, 0); ctx.lineTo(18, 0); ctx.lineTo(18, 18);
+    // crenellations on top
+    for (let x = -14; x <= 10; x += 4) {
+      ctx.moveTo(x, -6); ctx.lineTo(x, -8); ctx.lineTo(x + 2, -8); ctx.lineTo(x + 2, -6);
+    }
+    // central jharokha balcony
+    ctx.moveTo(-4, 0); ctx.lineTo(-4, -3); ctx.lineTo(4, -3); ctx.lineTo(4, 0);
+    ctx.moveTo(-4, -3); ctx.bezierCurveTo(-4, -8, 4, -8, 4, -3);
+    // entrance arch
+    ctx.moveTo(-4, 18); ctx.bezierCurveTo(-4, 10, 4, 10, 4, 18);
+    ctx.stroke();
+  }
+
+  function drawJaisalmer(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // sand dunes
+    ctx.moveTo(-22, 16);
+    ctx.bezierCurveTo(-16, 12, -10, 16, -4, 14);
+    ctx.bezierCurveTo(2, 12, 8, 16, 14, 14);
+    ctx.bezierCurveTo(18, 12, 22, 14, 22, 16);
+    // golden fort silhouette — circular layout suggested with tiered walls
+    ctx.moveTo(-16, 12); ctx.lineTo(-16, 4); ctx.lineTo(16, 4); ctx.lineTo(16, 12);
+    // cylindrical bastions
+    [-12, -6, 0, 6, 12].forEach(x => {
+      ctx.moveTo(x - 2, 4); ctx.lineTo(x - 2, -2); ctx.lineTo(x + 2, -2); ctx.lineTo(x + 2, 4);
+    });
+    // flag on top
+    ctx.moveTo(0, -2); ctx.lineTo(0, -10); ctx.lineTo(4, -8); ctx.lineTo(0, -6);
+    ctx.stroke();
+  }
+
+  function drawRamMandir(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // platform
+    ctx.moveTo(-18, 18); ctx.lineTo(-18, 14); ctx.lineTo(18, 14); ctx.lineTo(18, 18);
+    // main temple body
+    ctx.moveTo(-14, 14); ctx.lineTo(-14, 4); ctx.lineTo(14, 4); ctx.lineTo(14, 14);
+    // central shikhara — tall stepped tower
+    ctx.moveTo(-8, 4); ctx.lineTo(-6, -4); ctx.lineTo(-4, -10); ctx.lineTo(-2, -16);
+    ctx.lineTo(2, -16); ctx.lineTo(4, -10); ctx.lineTo(6, -4); ctx.lineTo(8, 4);
+    // side smaller shikharas
+    ctx.moveTo(-12, 4); ctx.lineTo(-11, 0); ctx.lineTo(-10, -4); ctx.lineTo(-9, 0); ctx.lineTo(-8, 4);
+    ctx.moveTo(12, 4); ctx.lineTo(11, 0); ctx.lineTo(10, -4); ctx.lineTo(9, 0); ctx.lineTo(8, 4);
+    // finial
+    ctx.moveTo(0, -16); ctx.lineTo(0, -20);
+    // entrance arch
+    ctx.moveTo(-3, 14); ctx.bezierCurveTo(-3, 8, 3, 8, 3, 14);
+    ctx.stroke();
+  }
+
+  function drawBaraImambara(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // grand vaulted hall
+    ctx.moveTo(-18, 18); ctx.lineTo(-18, 4); ctx.lineTo(18, 4); ctx.lineTo(18, 18);
+    // central large arched entrance
+    ctx.moveTo(-6, 18); ctx.bezierCurveTo(-6, 4, 6, 4, 6, 18);
+    // smaller side arches
+    ctx.moveTo(-14, 18); ctx.bezierCurveTo(-14, 10, -10, 10, -10, 18);
+    ctx.moveTo(10, 18); ctx.bezierCurveTo(10, 10, 14, 10, 14, 18);
+    // central dome
+    ctx.moveTo(-8, 4); ctx.bezierCurveTo(-8, -10, 8, -10, 8, 4);
+    ctx.moveTo(0, -10); ctx.lineTo(0, -14);
+    // minarets
+    ctx.moveTo(-16, 4); ctx.lineTo(-16, -6);
+    ctx.moveTo(16, 4); ctx.lineTo(16, -6);
+    ctx.moveTo(-16, -6); ctx.bezierCurveTo(-18, -10, -14, -10, -16, -6);
+    ctx.moveTo(16, -6); ctx.bezierCurveTo(18, -10, 14, -10, 16, -6);
+    ctx.stroke();
+  }
+
+  function drawVaranasiGhats(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-24, 18); ctx.lineTo(24, 18);
+    // river
+    ctx.moveTo(-24, 16); ctx.bezierCurveTo(-12, 14, 12, 14, 24, 16);
+    // ghat steps
+    ctx.moveTo(-22, 14); ctx.lineTo(-22, 12); ctx.lineTo(-18, 12); ctx.lineTo(-18, 10);
+    ctx.lineTo(-14, 10); ctx.lineTo(-14, 8); ctx.lineTo(22, 8);
+    // temple skyline along the river
+    ctx.moveTo(-14, 8); ctx.lineTo(-14, 0); ctx.lineTo(-8, 0); ctx.lineTo(-8, -8);
+    // shikhara tower
+    ctx.moveTo(-8, -8); ctx.lineTo(-6, -14); ctx.lineTo(-4, -16); ctx.lineTo(-2, -14); ctx.lineTo(0, -8);
+    // more buildings
+    ctx.lineTo(0, 0); ctx.lineTo(4, 0); ctx.lineTo(4, -4);
+    ctx.moveTo(4, -4); ctx.bezierCurveTo(4, -10, 10, -10, 10, -4);
+    ctx.lineTo(10, 0); ctx.lineTo(16, 0); ctx.lineTo(16, 8);
+    // small floating boats
+    ctx.moveTo(-20, 14); ctx.bezierCurveTo(-18, 16, -16, 16, -14, 14);
+    ctx.moveTo(14, 14); ctx.bezierCurveTo(16, 16, 18, 16, 20, 14);
+    ctx.stroke();
+  }
+
+  function drawTriveniSangam(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // confluence of three rivers — three converging wave lines
+    ctx.moveTo(-22, 4);
+    ctx.bezierCurveTo(-12, 8, -4, 6, 0, 10);
+    ctx.moveTo(22, 4);
+    ctx.bezierCurveTo(12, 8, 4, 6, 0, 10);
+    ctx.moveTo(0, -8);
+    ctx.bezierCurveTo(-2, 0, 2, 4, 0, 10);
+    // sun above
+    ctx.moveTo(-4, -10); ctx.bezierCurveTo(-4, -16, 4, -16, 4, -10); ctx.bezierCurveTo(4, -4, -4, -4, -4, -10);
+    // sunbeams
+    for (let i = 0; i < 6; i++) {
+      const a = (i / 6) * Math.PI * 2;
+      const x1 = Math.cos(a) * 6;
+      const y1 = Math.sin(a) * 6 - 13;
+      const x2 = Math.cos(a) * 9;
+      const y2 = Math.sin(a) * 9 - 13;
+      ctx.moveTo(x1, y1); ctx.lineTo(x2, y2);
+    }
+    // small boat
+    ctx.moveTo(-4, 12); ctx.bezierCurveTo(-2, 14, 2, 14, 4, 12);
+    ctx.moveTo(0, 12); ctx.lineTo(0, 8);
+    ctx.stroke();
+  }
+
+  function drawCellularJail(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // central watchtower
+    ctx.moveTo(-4, 18); ctx.lineTo(-4, -8); ctx.lineTo(4, -8); ctx.lineTo(4, 18);
+    // tower top observation deck
+    ctx.moveTo(-6, -8); ctx.lineTo(6, -8); ctx.lineTo(6, -12); ctx.lineTo(-6, -12); ctx.closePath();
+    ctx.moveTo(0, -12); ctx.lineTo(0, -18);
+    // radiating wings (the famous spoke design)
+    ctx.moveTo(0, 0); ctx.lineTo(-18, -6);
+    ctx.moveTo(0, 0); ctx.lineTo(18, -6);
+    ctx.moveTo(0, 0); ctx.lineTo(-18, 12);
+    ctx.moveTo(0, 0); ctx.lineTo(18, 12);
+    // tiny windows on wings
+    for (let i = 1; i <= 3; i++) {
+      const t = i / 4;
+      ctx.moveTo(-18 * t - 1, -6 * t - 1); ctx.lineTo(-18 * t + 1, -6 * t + 1);
+      ctx.moveTo(18 * t - 1, -6 * t - 1); ctx.lineTo(18 * t + 1, -6 * t + 1);
+    }
+    ctx.stroke();
+  }
+
+  function drawTirumala(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // seven hills (Tirumala is on Seshachalam hills)
+    ctx.moveTo(-22, 14);
+    ctx.lineTo(-16, 8); ctx.lineTo(-12, 12); ctx.lineTo(-6, 6);
+    ctx.lineTo(-2, 10); ctx.lineTo(2, 8); ctx.lineTo(6, 12);
+    ctx.lineTo(12, 8); ctx.lineTo(16, 12); ctx.lineTo(22, 14);
+    // temple gopuram on top
+    ctx.moveTo(-6, 4); ctx.lineTo(-6, -2); ctx.lineTo(-4, -2); ctx.lineTo(-4, -8);
+    ctx.lineTo(-2, -8); ctx.lineTo(-2, -14);
+    ctx.moveTo(6, 4); ctx.lineTo(6, -2); ctx.lineTo(4, -2); ctx.lineTo(4, -8);
+    ctx.lineTo(2, -8); ctx.lineTo(2, -14);
+    ctx.moveTo(-2, -14); ctx.lineTo(2, -14);
+    ctx.moveTo(0, -14); ctx.lineTo(0, -18);
+    ctx.stroke();
+  }
+
+  function drawKamakhya(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // platform
+    ctx.moveTo(-16, 18); ctx.lineTo(-16, 14); ctx.lineTo(16, 14); ctx.lineTo(16, 18);
+    // beehive-shaped shikhara (distinctive Kamakhya dome)
+    ctx.moveTo(-10, 14);
+    ctx.bezierCurveTo(-10, 0, -2, -10, 0, -16);
+    ctx.bezierCurveTo(2, -10, 10, 0, 10, 14);
+    // ribbed lines on dome
+    ctx.moveTo(-6, 14); ctx.bezierCurveTo(-6, 4, -2, -6, 0, -12);
+    ctx.moveTo(6, 14); ctx.bezierCurveTo(6, 4, 2, -6, 0, -12);
+    ctx.moveTo(0, 14); ctx.lineTo(0, -12);
+    // finial
+    ctx.moveTo(0, -16); ctx.lineTo(0, -20);
+    // small entrance
+    ctx.moveTo(-3, 14); ctx.lineTo(-3, 8); ctx.lineTo(3, 8); ctx.lineTo(3, 14);
+    ctx.stroke();
+  }
+
+  function drawMahabodhi(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // base
+    ctx.moveTo(-14, 18); ctx.lineTo(-14, 8); ctx.lineTo(14, 8); ctx.lineTo(14, 18);
+    // central pyramidal tower (Mahabodhi is famous for its stepped pyramid)
+    ctx.moveTo(-10, 8); ctx.lineTo(-8, 0); ctx.lineTo(-6, -8); ctx.lineTo(-2, -16); ctx.lineTo(0, -20);
+    ctx.lineTo(2, -16); ctx.lineTo(6, -8); ctx.lineTo(8, 0); ctx.lineTo(10, 8);
+    // four corner mini-towers
+    [-12, 12].forEach(x => {
+      ctx.moveTo(x, 8); ctx.lineTo(x, 4); ctx.lineTo(x - 1, 0); ctx.lineTo(x + 1, 0); ctx.lineTo(x, 4);
+    });
+    // bodhi tree leaf detail at top
+    ctx.moveTo(0, -20); ctx.lineTo(0, -24);
+    // entrance arch
+    ctx.moveTo(-3, 18); ctx.bezierCurveTo(-3, 12, 3, 12, 3, 18);
+    ctx.stroke();
+  }
+
+  function drawLehPalace(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // mountain backdrop
+    ctx.moveTo(-22, 16); ctx.lineTo(-14, 4); ctx.lineTo(-6, 10); ctx.lineTo(2, -2);
+    ctx.lineTo(10, 6); ctx.lineTo(16, 0); ctx.lineTo(22, 14);
+    // tibetan-style multi-storied palace
+    ctx.moveTo(-12, 14); ctx.lineTo(-12, 10); ctx.lineTo(12, 10); ctx.lineTo(12, 14);
+    ctx.moveTo(-10, 10); ctx.lineTo(-10, 6); ctx.lineTo(10, 6); ctx.lineTo(10, 10);
+    ctx.moveTo(-8, 6); ctx.lineTo(-8, 2); ctx.lineTo(8, 2); ctx.lineTo(8, 6);
+    ctx.moveTo(-6, 2); ctx.lineTo(-6, -2); ctx.lineTo(6, -2); ctx.lineTo(6, 2);
+    // tiny windows
+    for (let y of [12, 8, 4]) {
+      for (let x = -8; x <= 8; x += 4) {
+        ctx.moveTo(x - 1, y); ctx.lineTo(x + 1, y);
+      }
+    }
+    // prayer flags
+    ctx.moveTo(0, -2); ctx.lineTo(0, -8);
+    ctx.moveTo(-3, -6); ctx.lineTo(3, -6);
+    ctx.stroke();
+  }
+
+  function drawGwaliorFort(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // hill cliff
+    ctx.moveTo(-22, 14); ctx.lineTo(-18, 8); ctx.lineTo(18, 8); ctx.lineTo(22, 14);
+    // fort walls on top
+    ctx.moveTo(-16, 8); ctx.lineTo(-16, -2); ctx.lineTo(16, -2); ctx.lineTo(16, 8);
+    // distinctive blue-tile pavilions (Man Mandir Palace)
+    ctx.moveTo(-12, -2); ctx.lineTo(-12, -6); ctx.lineTo(-8, -6); ctx.lineTo(-8, -2);
+    ctx.moveTo(-2, -2); ctx.lineTo(-2, -8); ctx.lineTo(2, -8); ctx.lineTo(2, -2);
+    ctx.moveTo(8, -2); ctx.lineTo(8, -6); ctx.lineTo(12, -6); ctx.lineTo(12, -2);
+    // domes
+    [-10, 0, 10].forEach(x => {
+      const top = x === 0 ? -8 : -6;
+      ctx.moveTo(x - 2, top); ctx.bezierCurveTo(x - 2, top - 4, x + 2, top - 4, x + 2, top);
+      ctx.moveTo(x, top - 4); ctx.lineTo(x, top - 6);
+    });
+    ctx.stroke();
+  }
+
+  function drawKhajuraho(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // platform
+    ctx.moveTo(-18, 18); ctx.lineTo(-18, 14); ctx.lineTo(18, 14); ctx.lineTo(18, 18);
+    // characteristic clustered shikharas — multiple peaks rising together
+    // main peak
+    ctx.moveTo(-4, 14); ctx.lineTo(-3, 6); ctx.lineTo(-2, -2); ctx.lineTo(-1, -10); ctx.lineTo(0, -16);
+    ctx.lineTo(1, -10); ctx.lineTo(2, -2); ctx.lineTo(3, 6); ctx.lineTo(4, 14);
+    // left subsidiary peak
+    ctx.moveTo(-12, 14); ctx.lineTo(-11, 8); ctx.lineTo(-10, 2); ctx.lineTo(-9, -4); ctx.lineTo(-8, -8);
+    ctx.lineTo(-7, -4); ctx.lineTo(-6, 2); ctx.lineTo(-5, 8); ctx.lineTo(-4, 14);
+    // right subsidiary peak
+    ctx.moveTo(12, 14); ctx.lineTo(11, 8); ctx.lineTo(10, 2); ctx.lineTo(9, -4); ctx.lineTo(8, -8);
+    ctx.lineTo(7, -4); ctx.lineTo(6, 2); ctx.lineTo(5, 8); ctx.lineTo(4, 14);
+    // outermost small peaks
+    ctx.moveTo(-18, 14); ctx.lineTo(-16, 8); ctx.lineTo(-14, 4); ctx.lineTo(-12, 14);
+    ctx.moveTo(18, 14); ctx.lineTo(16, 8); ctx.lineTo(14, 4); ctx.lineTo(12, 14);
+    // finials
+    ctx.moveTo(0, -16); ctx.lineTo(0, -20);
+    ctx.stroke();
+  }
+
+  function drawDalLake(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // distant mountains
+    ctx.moveTo(-22, 8); ctx.lineTo(-12, -2); ctx.lineTo(-2, 4); ctx.lineTo(8, -4);
+    ctx.lineTo(16, 2); ctx.lineTo(22, 6);
+    // water surface line
+    ctx.moveTo(-22, 12); ctx.lineTo(22, 12);
+    // shikara boat (iconic Kashmiri boat)
+    ctx.moveTo(-8, 12);
+    ctx.bezierCurveTo(-12, 14, -4, 16, 0, 16);
+    ctx.bezierCurveTo(4, 16, 12, 14, 8, 12);
+    // canopy
+    ctx.moveTo(-4, 12); ctx.lineTo(-4, 8); ctx.lineTo(4, 8); ctx.lineTo(4, 12);
+    ctx.moveTo(-4, 8); ctx.bezierCurveTo(-4, 6, 4, 6, 4, 8);
+    // water reflections
+    ctx.moveTo(-18, 14); ctx.lineTo(-14, 14);
+    ctx.moveTo(12, 14); ctx.lineTo(16, 14);
+    // floating lily
+    ctx.moveTo(-14, 13); ctx.bezierCurveTo(-13, 11, -11, 11, -10, 13);
+    ctx.stroke();
+  }
+
+  function drawAjmerSharif(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // dargah courtyard wall
+    ctx.moveTo(-18, 18); ctx.lineTo(-18, 6); ctx.lineTo(18, 6); ctx.lineTo(18, 18);
+    // archway entrance
+    ctx.moveTo(-4, 18); ctx.bezierCurveTo(-4, 8, 4, 8, 4, 18);
+    // shrine main dome
+    ctx.moveTo(-8, 6); ctx.bezierCurveTo(-8, -8, 8, -8, 8, 6);
+    // crescent/finial on dome
+    ctx.moveTo(0, -8); ctx.lineTo(0, -12);
+    ctx.moveTo(-2, -10); ctx.lineTo(2, -10);
+    // minarets on either side
+    ctx.moveTo(-14, 6); ctx.lineTo(-14, -8);
+    ctx.moveTo(-14, -8); ctx.bezierCurveTo(-16, -12, -12, -12, -14, -8);
+    ctx.moveTo(-14, -12); ctx.lineTo(-14, -16);
+    ctx.moveTo(14, 6); ctx.lineTo(14, -8);
+    ctx.moveTo(14, -8); ctx.bezierCurveTo(16, -12, 12, -12, 14, -8);
+    ctx.moveTo(14, -12); ctx.lineTo(14, -16);
+    ctx.stroke();
+  }
+
+  function drawDiuFort(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // sea below
+    ctx.moveTo(-22, 16); ctx.bezierCurveTo(-12, 14, 12, 14, 22, 16);
+    // fort walls — Portuguese style sea fort
+    ctx.moveTo(-18, 14); ctx.lineTo(-18, 4); ctx.lineTo(18, 4); ctx.lineTo(18, 14);
+    // bastions at corners
+    ctx.moveTo(-18, 4); ctx.lineTo(-20, 4); ctx.lineTo(-20, 0); ctx.lineTo(-14, 0); ctx.lineTo(-14, 4);
+    ctx.moveTo(18, 4); ctx.lineTo(20, 4); ctx.lineTo(20, 0); ctx.lineTo(14, 0); ctx.lineTo(14, 4);
+    // crenellations
+    for (let x = -12; x <= 8; x += 4) {
+      ctx.moveTo(x, 4); ctx.lineTo(x, 2); ctx.lineTo(x + 2, 2); ctx.lineTo(x + 2, 4);
+    }
+    // central watchtower
+    ctx.moveTo(-3, 4); ctx.lineTo(-3, -8); ctx.lineTo(3, -8); ctx.lineTo(3, 4);
+    ctx.moveTo(-4, -8); ctx.lineTo(4, -8); ctx.lineTo(4, -10); ctx.lineTo(-4, -10); ctx.closePath();
+    ctx.moveTo(0, -10); ctx.lineTo(0, -14);
+    // small boat
+    ctx.moveTo(8, 16); ctx.bezierCurveTo(10, 18, 14, 18, 16, 16);
+    ctx.stroke();
+  }
+
+  function drawVidhanaSoudha(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // wide neoclassical building (Bengaluru's Vidhana Soudha)
+    ctx.moveTo(-20, 18); ctx.lineTo(-20, 10); ctx.lineTo(20, 10); ctx.lineTo(20, 18);
+    // columns
+    for (let x = -16; x <= 16; x += 4) {
+      ctx.moveTo(x, 18); ctx.lineTo(x, 10);
+    }
+    // main central section
+    ctx.moveTo(-12, 10); ctx.lineTo(-12, 0); ctx.lineTo(12, 0); ctx.lineTo(12, 10);
+    // central dome
+    ctx.moveTo(-8, 0); ctx.bezierCurveTo(-8, -10, 8, -10, 8, 0);
+    // smaller side domes
+    [-14, 14].forEach(x => {
+      ctx.moveTo(x - 2, 10); ctx.bezierCurveTo(x - 2, 4, x + 2, 4, x + 2, 10);
+    });
+    // finial
+    ctx.moveTo(0, -10); ctx.lineTo(0, -14);
+    ctx.stroke();
+  }
+
+  function drawKochi(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // water
+    ctx.moveTo(-22, 14); ctx.lineTo(22, 14);
+    // Chinese fishing nets — iconic to Kochi (cantilevered structure)
+    ctx.moveTo(-14, 14); ctx.lineTo(-14, -2);
+    ctx.moveTo(-14, -2); ctx.lineTo(-22, 4);
+    ctx.moveTo(-14, -2); ctx.lineTo(-6, 4);
+    // net hanging
+    ctx.moveTo(-22, 4); ctx.lineTo(-22, 8); ctx.lineTo(-6, 8); ctx.lineTo(-6, 4);
+    ctx.moveTo(-22, 8); ctx.bezierCurveTo(-14, 12, -14, 12, -6, 8);
+    // counterweight
+    ctx.moveTo(-14, -2); ctx.lineTo(-10, -6);
+    ctx.moveTo(-10, -6); ctx.bezierCurveTo(-9, -8, -11, -8, -10, -6);
+    // second net
+    ctx.moveTo(14, 14); ctx.lineTo(14, 0);
+    ctx.moveTo(14, 0); ctx.lineTo(8, 6);
+    ctx.moveTo(14, 0); ctx.lineTo(20, 6);
+    ctx.moveTo(8, 6); ctx.lineTo(8, 10); ctx.lineTo(20, 10); ctx.lineTo(20, 6);
+    ctx.moveTo(8, 10); ctx.bezierCurveTo(14, 12, 14, 12, 20, 10);
+    ctx.stroke();
+  }
+
+  function drawShaniwarWada(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // fortified palace walls
+    ctx.moveTo(-18, 18); ctx.lineTo(-18, -2); ctx.lineTo(18, -2); ctx.lineTo(18, 18);
+    // grand entrance gateway (Dilli Darwaza)
+    ctx.moveTo(-6, 18); ctx.lineTo(-6, 4); ctx.lineTo(6, 4); ctx.lineTo(6, 18);
+    ctx.moveTo(-6, 4); ctx.bezierCurveTo(-6, -4, 6, -4, 6, 4);
+    // crenellations on wall
+    for (let x = -16; x <= 14; x += 4) {
+      if (x > -8 && x < 8) continue;
+      ctx.moveTo(x, -2); ctx.lineTo(x, -4); ctx.lineTo(x + 2, -4); ctx.lineTo(x + 2, -2);
+    }
+    // corner bastions
+    ctx.moveTo(-18, 0); ctx.lineTo(-20, 0); ctx.lineTo(-20, -6); ctx.lineTo(-14, -6); ctx.lineTo(-14, -2);
+    ctx.moveTo(18, 0); ctx.lineTo(20, 0); ctx.lineTo(20, -6); ctx.lineTo(14, -6); ctx.lineTo(14, -2);
+    // flag
+    ctx.moveTo(0, -4); ctx.lineTo(0, -10); ctx.lineTo(4, -8); ctx.lineTo(0, -6);
+    ctx.stroke();
+  }
+
+  function drawDeekshabhoomi(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // base platform
+    ctx.moveTo(-18, 18); ctx.lineTo(-18, 14); ctx.lineTo(18, 14); ctx.lineTo(18, 18);
+    // huge stupa dome (largest hollow stupa in Asia)
+    ctx.moveTo(-16, 14);
+    ctx.bezierCurveTo(-16, -8, 16, -8, 16, 14);
+    // square harmika on top
+    ctx.moveTo(-3, -8); ctx.lineTo(-3, -12); ctx.lineTo(3, -12); ctx.lineTo(3, -8);
+    // chhatra (umbrella spire)
+    ctx.moveTo(0, -12); ctx.lineTo(0, -22);
+    ctx.moveTo(-3, -16); ctx.lineTo(3, -16);
+    ctx.moveTo(-2, -19); ctx.lineTo(2, -19);
+    // entrance
+    ctx.moveTo(-3, 14); ctx.lineTo(-3, 8); ctx.lineTo(3, 8); ctx.lineTo(3, 14);
+    ctx.stroke();
+  }
+
+  function drawOpenHand(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // Le Corbusier's Open Hand monument — Chandigarh
+    // tall pole base
+    ctx.moveTo(0, 18); ctx.lineTo(0, 4);
+    // stylized open hand shape on top (rotates with wind in real life)
+    ctx.moveTo(-12, 4);
+    ctx.bezierCurveTo(-14, -4, -8, -10, 0, -10);
+    ctx.bezierCurveTo(8, -10, 14, -4, 12, 4);
+    ctx.lineTo(8, 4);
+    // fingers
+    ctx.moveTo(-8, -4); ctx.lineTo(-10, -12);
+    ctx.moveTo(-4, -8); ctx.lineTo(-4, -16);
+    ctx.moveTo(0, -10); ctx.lineTo(2, -18);
+    ctx.moveTo(4, -8); ctx.lineTo(6, -16);
+    ctx.moveTo(8, -4); ctx.lineTo(10, -12);
+    // base plinth
+    ctx.moveTo(-6, 18); ctx.lineTo(-6, 12); ctx.lineTo(6, 12); ctx.lineTo(6, 18);
+    ctx.stroke();
+  }
+
+  function drawMarinaLighthouse(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // beach/sea
+    ctx.moveTo(-22, 16); ctx.bezierCurveTo(-12, 14, 12, 14, 22, 16);
+    // Marina Lighthouse — Chennai's iconic red and white striped lighthouse
+    ctx.moveTo(-4, 14); ctx.lineTo(-3, -10); ctx.lineTo(3, -10); ctx.lineTo(4, 14);
+    // horizontal bands (lighthouse stripes)
+    ctx.moveTo(-3.5, 6); ctx.lineTo(3.5, 6);
+    ctx.moveTo(-3.2, -2); ctx.lineTo(3.2, -2);
+    // observation deck
+    ctx.moveTo(-5, -10); ctx.lineTo(5, -10); ctx.lineTo(5, -14); ctx.lineTo(-5, -14); ctx.closePath();
+    // light beacon
+    ctx.moveTo(-3, -14); ctx.bezierCurveTo(-3, -18, 3, -18, 3, -14);
+    ctx.moveTo(0, -18); ctx.lineTo(0, -20);
+    ctx.stroke();
+  }
+
+  function drawFrenchQuarter(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // Pondicherry French quarter — colonial arched gate
+    // wide arch
+    ctx.moveTo(-16, 18); ctx.lineTo(-16, 0); ctx.lineTo(16, 0); ctx.lineTo(16, 18);
+    // central archway
+    ctx.moveTo(-10, 18); ctx.bezierCurveTo(-10, 0, 10, 0, 10, 18);
+    // small arches on sides
+    ctx.moveTo(-14, 18); ctx.bezierCurveTo(-14, 12, -12, 12, -12, 18);
+    ctx.moveTo(12, 18); ctx.bezierCurveTo(12, 12, 14, 12, 14, 18);
+    // pediment top
+    ctx.moveTo(-16, 0); ctx.lineTo(-14, -4); ctx.lineTo(14, -4); ctx.lineTo(16, 0);
+    // small clock detail
+    ctx.moveTo(-2, -4); ctx.bezierCurveTo(-2, -8, 2, -8, 2, -4); ctx.bezierCurveTo(2, 0, -2, 0, -2, -4);
+    ctx.moveTo(0, -4); ctx.lineTo(0, -6);
+    ctx.moveTo(0, -4); ctx.lineTo(2, -4);
+    // flag/finial
+    ctx.moveTo(0, -8); ctx.lineTo(0, -12);
+    ctx.stroke();
+  }
+
+  function drawGoaChurch(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // Bom Jesus Basilica — Goa baroque church
+    // body
+    ctx.moveTo(-14, 18); ctx.lineTo(-14, 0); ctx.lineTo(14, 0); ctx.lineTo(14, 18);
+    // ornate facade
+    ctx.moveTo(-10, 18); ctx.lineTo(-10, 4); ctx.lineTo(10, 4); ctx.lineTo(10, 18);
+    // central entrance
+    ctx.moveTo(-3, 18); ctx.bezierCurveTo(-3, 12, 3, 12, 3, 18);
+    // round window above
+    ctx.moveTo(-2, 8); ctx.bezierCurveTo(-2, 4, 2, 4, 2, 8); ctx.bezierCurveTo(2, 12, -2, 12, -2, 8);
+    // pediment top
+    ctx.moveTo(-10, 4); ctx.lineTo(-6, -2); ctx.lineTo(6, -2); ctx.lineTo(10, 4);
+    // bell tower
+    ctx.moveTo(12, 0); ctx.lineTo(12, -8); ctx.lineTo(16, -8); ctx.lineTo(16, 0);
+    // bell tower top
+    ctx.moveTo(12, -8); ctx.lineTo(14, -12); ctx.lineTo(16, -8);
+    // cross
+    ctx.moveTo(0, -2); ctx.lineTo(0, -8);
+    ctx.moveTo(-2, -5); ctx.lineTo(2, -5);
+    ctx.stroke();
+  }
+
+  // ===== International iconic landmarks =====
+
+  function drawHagiaSophia(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // base
+    ctx.moveTo(-16, 18); ctx.lineTo(-16, 4); ctx.lineTo(16, 4); ctx.lineTo(16, 18);
+    // half-domes flanking
+    ctx.moveTo(-12, 4); ctx.bezierCurveTo(-12, -4, -4, -4, -4, 4);
+    ctx.moveTo(12, 4); ctx.bezierCurveTo(12, -4, 4, -4, 4, 4);
+    // central main dome
+    ctx.moveTo(-8, -4); ctx.bezierCurveTo(-8, -16, 8, -16, 8, -4);
+    // crescent finial
+    ctx.moveTo(0, -16); ctx.lineTo(0, -20);
+    ctx.moveTo(-2, -19); ctx.bezierCurveTo(-2, -22, 2, -22, 2, -19);
+    // four minarets (added when converted to mosque)
+    [-18, -14, 14, 18].forEach(x => {
+      ctx.moveTo(x, 18); ctx.lineTo(x, -2);
+      ctx.moveTo(x - 1, -2); ctx.lineTo(x + 1, -2); ctx.lineTo(x + 1, -4); ctx.lineTo(x - 1, -4); ctx.closePath();
+      ctx.moveTo(x, -4); ctx.lineTo(x, -8);
+    });
+    ctx.stroke();
+  }
+
+  function drawAcropolis(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // hill base
+    ctx.moveTo(-22, 16); ctx.bezierCurveTo(-14, 8, 14, 8, 22, 16);
+    // Parthenon — base and steps
+    ctx.moveTo(-14, 8); ctx.lineTo(-14, 4); ctx.lineTo(14, 4); ctx.lineTo(14, 8);
+    ctx.moveTo(-12, 4); ctx.lineTo(-12, 2); ctx.lineTo(12, 2); ctx.lineTo(12, 4);
+    // columns
+    for (let x = -10; x <= 10; x += 2) {
+      ctx.moveTo(x, 2); ctx.lineTo(x, -8);
+    }
+    // architrave + pediment
+    ctx.moveTo(-12, -8); ctx.lineTo(12, -8);
+    ctx.moveTo(-12, -10); ctx.lineTo(12, -10);
+    ctx.moveTo(-12, -10); ctx.lineTo(0, -16); ctx.lineTo(12, -10);
+    ctx.stroke();
+  }
+
+  function drawAngkorWat(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // moat reflection
+    ctx.moveTo(-22, 16); ctx.lineTo(22, 16);
+    // base platform
+    ctx.moveTo(-20, 14); ctx.lineTo(-20, 10); ctx.lineTo(20, 10); ctx.lineTo(20, 14);
+    // five iconic lotus-bud towers (one large center, four corners)
+    // outer corner towers
+    [-14, 14].forEach(x => {
+      ctx.moveTo(x - 2, 10); ctx.lineTo(x - 2, -2);
+      ctx.moveTo(x + 2, 10); ctx.lineTo(x + 2, -2);
+      ctx.moveTo(x - 2, -2); ctx.bezierCurveTo(x - 2, -8, x + 2, -8, x + 2, -2);
+      ctx.moveTo(x, -8); ctx.lineTo(x, -10);
+    });
+    // inner towers
+    [-6, 6].forEach(x => {
+      ctx.moveTo(x - 2, 10); ctx.lineTo(x - 2, -4);
+      ctx.moveTo(x + 2, 10); ctx.lineTo(x + 2, -4);
+      ctx.moveTo(x - 2, -4); ctx.bezierCurveTo(x - 2, -10, x + 2, -10, x + 2, -4);
+      ctx.moveTo(x, -10); ctx.lineTo(x, -12);
+    });
+    // central main tower (tallest)
+    ctx.moveTo(-3, 10); ctx.lineTo(-3, -8);
+    ctx.moveTo(3, 10); ctx.lineTo(3, -8);
+    ctx.moveTo(-3, -8); ctx.bezierCurveTo(-3, -16, 3, -16, 3, -8);
+    ctx.moveTo(0, -16); ctx.lineTo(0, -20);
+    ctx.stroke();
+  }
+
+  function drawBaliTemple(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // sea/cliff base
+    ctx.moveTo(-22, 16); ctx.bezierCurveTo(-10, 14, 10, 14, 22, 16);
+    // Tanah Lot — temple on a rock with characteristic split gate (candi bentar)
+    ctx.moveTo(-16, 14); ctx.lineTo(-12, 14); ctx.lineTo(-12, 0); ctx.lineTo(-8, -4);
+    ctx.moveTo(16, 14); ctx.lineTo(12, 14); ctx.lineTo(12, 0); ctx.lineTo(8, -4);
+    // central pagoda-style roofs (tiered meru towers)
+    ctx.moveTo(-6, 14); ctx.lineTo(-6, 4); ctx.lineTo(6, 4); ctx.lineTo(6, 14);
+    // tiered meru (3 layers)
+    ctx.moveTo(-8, 4); ctx.lineTo(-6, 0); ctx.lineTo(6, 0); ctx.lineTo(8, 4);
+    ctx.moveTo(-7, 0); ctx.lineTo(-5, -4); ctx.lineTo(5, -4); ctx.lineTo(7, 0);
+    ctx.moveTo(-6, -4); ctx.lineTo(-4, -8); ctx.lineTo(4, -8); ctx.lineTo(6, -4);
+    ctx.moveTo(-5, -8); ctx.lineTo(0, -14); ctx.lineTo(5, -8);
+    // finial
+    ctx.moveTo(0, -14); ctx.lineTo(0, -18);
+    ctx.stroke();
+  }
+
+  function drawSheikhZayed(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // base
+    ctx.moveTo(-18, 18); ctx.lineTo(-18, 6); ctx.lineTo(18, 6); ctx.lineTo(18, 18);
+    // arched colonnade
+    for (let x = -16; x <= 12; x += 4) {
+      ctx.moveTo(x, 18); ctx.bezierCurveTo(x, 10, x + 4, 10, x + 4, 18);
+    }
+    // central main dome
+    ctx.moveTo(-8, 6); ctx.bezierCurveTo(-8, -8, 8, -8, 8, 6);
+    // smaller flanking domes
+    [-13, 13].forEach(x => {
+      ctx.moveTo(x - 3, 6); ctx.bezierCurveTo(x - 3, -2, x + 3, -2, x + 3, 6);
+    });
+    // crescent finial
+    ctx.moveTo(0, -8); ctx.lineTo(0, -12);
+    ctx.moveTo(-2, -11); ctx.bezierCurveTo(-2, -14, 2, -14, 2, -11);
+    // tall minarets
+    [-20, 20].forEach(x => {
+      ctx.moveTo(x, 18); ctx.lineTo(x, -10);
+      ctx.moveTo(x - 1, -10); ctx.lineTo(x + 1, -10);
+      ctx.moveTo(x, -10); ctx.bezierCurveTo(x - 1, -14, x + 1, -14, x, -10);
+      ctx.moveTo(x, -14); ctx.lineTo(x, -16);
+    });
+    ctx.stroke();
+  }
+
+  function drawSaudiMinaret(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // mosque base
+    ctx.moveTo(-16, 18); ctx.lineTo(-16, 4); ctx.lineTo(16, 4); ctx.lineTo(16, 18);
+    // central dome
+    ctx.moveTo(-8, 4); ctx.bezierCurveTo(-8, -8, 8, -8, 8, 4);
+    // crescent finial
+    ctx.moveTo(0, -8); ctx.lineTo(0, -12);
+    ctx.moveTo(-2, -11); ctx.bezierCurveTo(-2, -14, 2, -14, 2, -11);
+    // entrance arch
+    ctx.moveTo(-4, 18); ctx.bezierCurveTo(-4, 10, 4, 10, 4, 18);
+    // tall slender minarets
+    [-18, 18].forEach(x => {
+      ctx.moveTo(x, 18); ctx.lineTo(x, -8);
+      // gallery
+      ctx.moveTo(x - 1, -2); ctx.lineTo(x + 1, -2);
+      // top onion
+      ctx.moveTo(x - 1, -8); ctx.bezierCurveTo(x - 1, -12, x + 1, -12, x + 1, -8);
+      ctx.moveTo(x, -12); ctx.lineTo(x, -14);
+    });
+    ctx.stroke();
+  }
+
+  function drawWatPho(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // base platform
+    ctx.moveTo(-18, 18); ctx.lineTo(-18, 14); ctx.lineTo(18, 14); ctx.lineTo(18, 18);
+    // Wat Arun / Bangkok temple — central prang (corn-cob shaped tower)
+    ctx.moveTo(-8, 14); ctx.lineTo(-7, 6); ctx.lineTo(-5, -2); ctx.lineTo(-3, -10);
+    ctx.lineTo(-1, -16); ctx.lineTo(1, -16); ctx.lineTo(3, -10); ctx.lineTo(5, -2);
+    ctx.lineTo(7, 6); ctx.lineTo(8, 14);
+    // ribs on the prang
+    ctx.moveTo(-4, 6); ctx.lineTo(4, 6);
+    ctx.moveTo(-2, -2); ctx.lineTo(2, -2);
+    // corner mini-prangs
+    ctx.moveTo(-14, 14); ctx.lineTo(-13, 8); ctx.lineTo(-12, 4); ctx.lineTo(-11, 8); ctx.lineTo(-10, 14);
+    ctx.moveTo(14, 14); ctx.lineTo(13, 8); ctx.lineTo(12, 4); ctx.lineTo(11, 8); ctx.lineTo(10, 14);
+    // finial
+    ctx.moveTo(0, -16); ctx.lineTo(0, -20);
+    ctx.stroke();
+  }
+
+  function drawColombo(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // sea
+    ctx.moveTo(-22, 16); ctx.bezierCurveTo(-12, 14, 12, 14, 22, 16);
+    // Colombo Lotus Tower — distinctive lotus-bud shaped TV tower
+    // base
+    ctx.moveTo(-3, 14); ctx.lineTo(-3, 4);
+    ctx.moveTo(3, 14); ctx.lineTo(3, 4);
+    // lotus bud bulge
+    ctx.moveTo(-3, 4); ctx.bezierCurveTo(-8, 2, -8, -8, -3, -10);
+    ctx.moveTo(3, 4); ctx.bezierCurveTo(8, 2, 8, -8, 3, -10);
+    // bud peak
+    ctx.moveTo(-3, -10); ctx.bezierCurveTo(-3, -14, 3, -14, 3, -10);
+    ctx.moveTo(0, -14); ctx.lineTo(0, -18);
+    ctx.moveTo(0, -18); ctx.lineTo(0, -22);
+    // distant skyline
+    ctx.moveTo(-20, 14); ctx.lineTo(-20, 10); ctx.lineTo(-14, 10); ctx.lineTo(-14, 14);
+    ctx.moveTo(14, 14); ctx.lineTo(14, 8); ctx.lineTo(20, 8); ctx.lineTo(20, 14);
+    ctx.stroke();
+  }
+
+  function drawBoudhanath(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // mountain backdrop (Himalayan suggestion)
+    ctx.moveTo(-22, 12); ctx.lineTo(-14, 4); ctx.lineTo(-6, 8); ctx.lineTo(2, 0);
+    ctx.lineTo(10, 6); ctx.lineTo(22, 10);
+    // stupa base — three-tiered platform
+    ctx.moveTo(-14, 14); ctx.lineTo(-14, 12); ctx.lineTo(14, 12); ctx.lineTo(14, 14);
+    ctx.moveTo(-12, 12); ctx.lineTo(-12, 10); ctx.lineTo(12, 10); ctx.lineTo(12, 12);
+    ctx.moveTo(-10, 10); ctx.lineTo(-10, 8); ctx.lineTo(10, 8); ctx.lineTo(10, 10);
+    // huge white dome
+    ctx.moveTo(-10, 8); ctx.bezierCurveTo(-10, -6, 10, -6, 10, 8);
+    // square harmika with the famous painted eyes
+    ctx.moveTo(-3, -6); ctx.lineTo(-3, -10); ctx.lineTo(3, -10); ctx.lineTo(3, -6);
+    // eyes
+    ctx.moveTo(-2, -8); ctx.bezierCurveTo(-2, -7, -1, -7, -1, -8);
+    ctx.moveTo(1, -8); ctx.bezierCurveTo(1, -7, 2, -7, 2, -8);
+    // tiered spire
+    ctx.moveTo(-2, -10); ctx.lineTo(2, -10);
+    ctx.moveTo(0, -10); ctx.lineTo(0, -22);
+    ctx.moveTo(-2, -14); ctx.lineTo(2, -14);
+    ctx.moveTo(-1.5, -18); ctx.lineTo(1.5, -18);
+    ctx.stroke();
+  }
+
+  function drawAmsterdamCanal(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // canal
+    ctx.moveTo(-22, 14); ctx.lineTo(22, 14);
+    // canal house row — distinctive stepped/triangular gables
+    // house 1
+    ctx.moveTo(-18, 14); ctx.lineTo(-18, 0); ctx.lineTo(-12, 0);
+    ctx.lineTo(-12, -2); ctx.lineTo(-15, -6); ctx.lineTo(-18, -2); ctx.lineTo(-18, 0);
+    // house 2 — stepped gable
+    ctx.moveTo(-10, 14); ctx.lineTo(-10, 2); ctx.lineTo(-4, 2);
+    ctx.lineTo(-4, 0); ctx.lineTo(-6, 0); ctx.lineTo(-6, -2); ctx.lineTo(-8, -2); ctx.lineTo(-8, -4); ctx.lineTo(-10, -4); ctx.lineTo(-10, 2);
+    // house 3 — bell gable
+    ctx.moveTo(-2, 14); ctx.lineTo(-2, 2); ctx.lineTo(4, 2);
+    ctx.bezierCurveTo(4, -4, -2, -4, -2, 2);
+    // house 4 — neck gable
+    ctx.moveTo(6, 14); ctx.lineTo(6, 0); ctx.lineTo(12, 0);
+    ctx.lineTo(12, -2); ctx.lineTo(10, -2); ctx.lineTo(10, -4); ctx.lineTo(8, -4); ctx.lineTo(8, -2); ctx.lineTo(6, -2);
+    // house 5
+    ctx.moveTo(14, 14); ctx.lineTo(14, 4); ctx.lineTo(20, 4);
+    ctx.lineTo(20, 0); ctx.lineTo(17, -4); ctx.lineTo(14, 0); ctx.lineTo(14, 4);
+    // canal boat
+    ctx.moveTo(-4, 16); ctx.bezierCurveTo(-2, 18, 2, 18, 4, 16);
+    ctx.stroke();
+  }
+
+  function drawTreeOfLife(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // desert ground
+    ctx.moveTo(-22, 16); ctx.bezierCurveTo(-12, 16, 12, 16, 22, 16);
+    // Tree of Life (Bahrain) — lone tree in desert
+    // trunk
+    ctx.moveTo(-2, 16); ctx.lineTo(-2, 0); ctx.lineTo(2, 0); ctx.lineTo(2, 16);
+    // branches reaching out
+    ctx.moveTo(-2, 4); ctx.lineTo(-8, -2); ctx.lineTo(-12, -4);
+    ctx.moveTo(-2, 0); ctx.lineTo(-6, -6);
+    ctx.moveTo(2, 4); ctx.lineTo(8, -2); ctx.lineTo(12, -4);
+    ctx.moveTo(2, 0); ctx.lineTo(6, -6);
+    ctx.moveTo(0, 0); ctx.lineTo(0, -8);
+    // canopy of leaves — irregular blob
+    ctx.moveTo(-12, -4);
+    ctx.bezierCurveTo(-16, -10, -8, -16, 0, -14);
+    ctx.bezierCurveTo(8, -16, 16, -10, 12, -4);
+    ctx.bezierCurveTo(8, 0, -8, 0, -12, -4);
+    ctx.stroke();
+  }
+
+  function drawHongKong(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // harbor water
+    ctx.moveTo(-22, 16); ctx.lineTo(22, 16);
+    // dense skyscraper skyline — varying heights
+    const heights = [4, -2, 6, -8, 0, -12, -4, -10, 2, -6, -2];
+    let x = -20;
+    for (let i = 0; i < heights.length; i++) {
+      const w = 3 + (i % 3);
+      ctx.moveTo(x, 16); ctx.lineTo(x, heights[i]);
+      ctx.lineTo(x + w, heights[i]); ctx.lineTo(x + w, 16);
+      // vertical window line
+      ctx.moveTo(x + w / 2, heights[i] + 2); ctx.lineTo(x + w / 2, 14);
+      x += w + 0.5;
+    }
+    // peak in background (Victoria Peak suggestion)
+    ctx.moveTo(-22, 8); ctx.lineTo(-12, -2); ctx.lineTo(2, 4); ctx.lineTo(14, -4); ctx.lineTo(22, 6);
+    ctx.stroke();
+  }
+
+  function drawCantonTower(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // Canton Tower — Guangzhou's distinctive twisting hyperboloid tower
+    // narrow base
+    ctx.moveTo(-3, 18); ctx.lineTo(-3, 12);
+    ctx.moveTo(3, 18); ctx.lineTo(3, 12);
+    // hyperboloid waist — bulges out then narrows
+    ctx.moveTo(-3, 12); ctx.bezierCurveTo(-7, 4, -7, -4, -3, -10);
+    ctx.moveTo(3, 12); ctx.bezierCurveTo(7, 4, 7, -4, 3, -10);
+    // narrow top
+    ctx.lineTo(3, -16);
+    ctx.moveTo(-3, -10); ctx.lineTo(-3, -16);
+    // antenna spire
+    ctx.moveTo(0, -16); ctx.lineTo(0, -22);
+    // diagonal lattice lines (the tower's mesh structure)
+    for (let i = 0; i < 4; i++) {
+      const t = i / 4;
+      const y1 = 12 - t * 22;
+      const y2 = 12 - (t + 0.25) * 22;
+      const x1 = -3 - Math.sin(t * Math.PI) * 4;
+      const x2 = 3 + Math.sin((t + 0.25) * Math.PI) * 4;
+      ctx.moveTo(x1, y1); ctx.lineTo(x2, y2);
+    }
+    ctx.stroke();
+  }
+
+  function drawHanoiPagoda(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // One Pillar Pagoda — Hanoi's iconic temple on a single column over water
+    // water/lake
+    ctx.moveTo(-22, 16); ctx.bezierCurveTo(-12, 14, 12, 14, 22, 16);
+    // single central pillar
+    ctx.moveTo(-2, 14); ctx.lineTo(-2, 4); ctx.lineTo(2, 4); ctx.lineTo(2, 14);
+    // pagoda body on top
+    ctx.moveTo(-8, 4); ctx.lineTo(-8, -4); ctx.lineTo(8, -4); ctx.lineTo(8, 4);
+    // upturned tiered roof
+    ctx.moveTo(-10, -4); ctx.bezierCurveTo(-6, -8, 6, -8, 10, -4);
+    ctx.moveTo(-10, -4); ctx.lineTo(-12, -2);
+    ctx.moveTo(10, -4); ctx.lineTo(12, -2);
+    // upper smaller roof
+    ctx.moveTo(-6, -8); ctx.lineTo(-4, -12); ctx.lineTo(4, -12); ctx.lineTo(6, -8);
+    ctx.moveTo(-6, -8); ctx.bezierCurveTo(-4, -10, 4, -10, 6, -8);
+    // finial
+    ctx.moveTo(0, -12); ctx.lineTo(0, -16);
+    ctx.stroke();
+  }
+
+  function drawHCMC(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // Notre Dame Cathedral Saigon — French colonial twin-spire cathedral
+    // body
+    ctx.moveTo(-12, 18); ctx.lineTo(-12, -2); ctx.lineTo(12, -2); ctx.lineTo(12, 18);
+    // facade detail
+    ctx.moveTo(-8, 18); ctx.lineTo(-8, 4); ctx.lineTo(8, 4); ctx.lineTo(8, 18);
+    // central rose window
+    ctx.moveTo(-2, 8); ctx.bezierCurveTo(-2, 4, 2, 4, 2, 8); ctx.bezierCurveTo(2, 12, -2, 12, -2, 8);
+    // central entrance
+    ctx.moveTo(-2, 18); ctx.bezierCurveTo(-2, 14, 2, 14, 2, 18);
+    // pediment
+    ctx.moveTo(-8, 4); ctx.lineTo(0, -2); ctx.lineTo(8, 4);
+    // twin bell towers/spires
+    [-12, 12].forEach(x => {
+      ctx.moveTo(x - 2, -2); ctx.lineTo(x - 2, -10); ctx.lineTo(x + 2, -10); ctx.lineTo(x + 2, -2);
+      ctx.moveTo(x - 2, -10); ctx.lineTo(x, -16); ctx.lineTo(x + 2, -10);
+      ctx.moveTo(x, -16); ctx.lineTo(x, -20);
+    });
+    ctx.stroke();
+  }
+
+  function drawSeychelles(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // ocean
+    ctx.moveTo(-22, 16); ctx.bezierCurveTo(-12, 14, 12, 14, 22, 16);
+    // beach with iconic granite boulders (Anse Source d'Argent)
+    ctx.moveTo(-14, 14); ctx.bezierCurveTo(-18, 6, -10, 0, -6, 4); ctx.bezierCurveTo(-2, 8, -8, 14, -14, 14);
+    ctx.moveTo(8, 14); ctx.bezierCurveTo(2, 8, 12, 0, 16, 6); ctx.bezierCurveTo(20, 12, 14, 16, 8, 14);
+    // palm tree
+    ctx.moveTo(0, 14); ctx.bezierCurveTo(-2, 8, 2, 4, 0, -4);
+    // palm fronds
+    ctx.moveTo(0, -4); ctx.bezierCurveTo(-8, -8, -10, -2, -8, 2);
+    ctx.moveTo(0, -4); ctx.bezierCurveTo(8, -8, 10, -2, 8, 2);
+    ctx.moveTo(0, -4); ctx.bezierCurveTo(-4, -12, -6, -10, -8, -8);
+    ctx.moveTo(0, -4); ctx.bezierCurveTo(4, -12, 6, -10, 8, -8);
+    // sun
+    ctx.moveTo(14, -10); ctx.bezierCurveTo(14, -14, 18, -14, 18, -10); ctx.bezierCurveTo(18, -6, 14, -6, 14, -10);
+    ctx.stroke();
+  }
+
+  function drawMauritius(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // ocean
+    ctx.moveTo(-22, 16); ctx.bezierCurveTo(-12, 14, 12, 14, 22, 16);
+    // Le Morne Brabant — distinctive flat-topped basalt mountain
+    ctx.moveTo(-12, 14);
+    ctx.lineTo(-10, 0);
+    ctx.lineTo(10, 0);
+    ctx.lineTo(12, 14);
+    // flat top
+    ctx.moveTo(-10, 0); ctx.lineTo(10, 0);
+    // texture lines
+    ctx.moveTo(-8, 4); ctx.lineTo(-6, 12);
+    ctx.moveTo(-2, 2); ctx.lineTo(0, 12);
+    ctx.moveTo(4, 2); ctx.lineTo(6, 12);
+    // small palm on shore
+    ctx.moveTo(-18, 14); ctx.lineTo(-16, 8);
+    ctx.moveTo(-16, 8); ctx.bezierCurveTo(-20, 6, -14, 4, -16, 8);
+    ctx.moveTo(-16, 8); ctx.bezierCurveTo(-12, 6, -18, 4, -16, 8);
+    // sun
+    ctx.moveTo(14, -10); ctx.bezierCurveTo(14, -14, 18, -14, 18, -10); ctx.bezierCurveTo(18, -6, 14, -6, 14, -10);
+    ctx.stroke();
+  }
+
+  function drawNairobi(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // savannah/grass
+    ctx.moveTo(-22, 16); ctx.bezierCurveTo(-12, 16, 12, 16, 22, 16);
+    // acacia tree (iconic East African flat-top tree)
+    ctx.moveTo(-4, 16); ctx.lineTo(-3, 8); ctx.lineTo(-1, 0);
+    ctx.moveTo(0, 16); ctx.lineTo(0, 6);
+    // flat canopy
+    ctx.moveTo(-12, 0); ctx.bezierCurveTo(-12, -4, 12, -4, 12, 0);
+    ctx.lineTo(-12, 0);
+    // KICC tower (Nairobi's distinctive cylindrical building) in background
+    ctx.moveTo(10, 16); ctx.lineTo(10, 4); ctx.lineTo(14, 4); ctx.lineTo(14, 16);
+    // tower top - cone
+    ctx.moveTo(10, 4); ctx.lineTo(12, 0); ctx.lineTo(14, 4);
+    // small giraffe silhouette (just dots/lines)
+    ctx.moveTo(-16, 16); ctx.lineTo(-16, 10); ctx.lineTo(-14, 10); ctx.lineTo(-14, 12);
+    ctx.lineTo(-12, 12); ctx.lineTo(-12, 8); ctx.lineTo(-13, 8); ctx.lineTo(-13, 6);
+    ctx.stroke();
+  }
+
+  function drawAlmaty(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // Tian Shan mountains backdrop (Almaty is famous for them)
+    ctx.moveTo(-22, 14); ctx.lineTo(-16, 0); ctx.lineTo(-10, 8);
+    ctx.lineTo(-4, -6); ctx.lineTo(2, 4); ctx.lineTo(8, -4); ctx.lineTo(14, 6); ctx.lineTo(22, 14);
+    // snow caps
+    ctx.moveTo(-18, 4); ctx.lineTo(-16, 0); ctx.lineTo(-14, 4);
+    ctx.moveTo(-6, -2); ctx.lineTo(-4, -6); ctx.lineTo(-2, -2);
+    ctx.moveTo(6, 0); ctx.lineTo(8, -4); ctx.lineTo(10, 0);
+    // Zenkov Cathedral (distinctive wooden Russian Orthodox in Almaty)
+    ctx.moveTo(-4, 14); ctx.lineTo(-4, 8); ctx.lineTo(4, 8); ctx.lineTo(4, 14);
+    // onion dome
+    ctx.moveTo(-3, 8); ctx.bezierCurveTo(-3, 4, 3, 4, 3, 8);
+    // cross
+    ctx.moveTo(0, 4); ctx.lineTo(0, 0);
+    ctx.moveTo(-1, 2); ctx.lineTo(1, 2);
+    ctx.stroke();
+  }
+
+  function drawTbilisi(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // Narikala Fortress on hill — Tbilisi's old town landmark
+    ctx.moveTo(-22, 14); ctx.bezierCurveTo(-12, 8, -2, 12, 6, 6); ctx.bezierCurveTo(14, 0, 18, 8, 22, 12);
+    // fortress walls on hilltop
+    ctx.moveTo(-8, 10); ctx.lineTo(-8, 0); ctx.lineTo(8, 0); ctx.lineTo(8, 10);
+    // tower
+    ctx.moveTo(-2, 0); ctx.lineTo(-2, -8); ctx.lineTo(2, -8); ctx.lineTo(2, 0);
+    // crenellations
+    for (let x = -6; x <= 6; x += 2) {
+      ctx.moveTo(x, 0); ctx.lineTo(x, -2); ctx.lineTo(x + 1, -2); ctx.lineTo(x + 1, 0);
+    }
+    // flag
+    ctx.moveTo(0, -8); ctx.lineTo(0, -12); ctx.lineTo(4, -10); ctx.lineTo(0, -8);
+    // Mtkvari river below
+    ctx.moveTo(-22, 16); ctx.lineTo(22, 16);
+    ctx.stroke();
+  }
+
+  function drawBaku(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // Flame Towers — Baku's iconic 3 flame-shaped skyscrapers
+    [-12, 0, 12].forEach((x, i) => {
+      const h = i === 1 ? -16 : -10;  // middle tallest
+      // flame shape — wider base, twisting up to point
+      ctx.moveTo(x - 4, 18);
+      ctx.bezierCurveTo(x - 5, 6, x - 3, -4, x - 1, h + 2);
+      ctx.lineTo(x, h);
+      ctx.bezierCurveTo(x + 3, -4, x + 5, 6, x + 4, 18);
+      ctx.lineTo(x - 4, 18);
+      // vertical line in middle
+      ctx.moveTo(x, 18); ctx.lineTo(x, h + 2);
+    });
+    ctx.stroke();
+  }
+
+  function drawTashkent(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // Registan-style portal (Uzbek architecture archetype)
+    ctx.moveTo(-16, 18); ctx.lineTo(-16, -2); ctx.lineTo(16, -2); ctx.lineTo(16, 18);
+    // huge iwan archway
+    ctx.moveTo(-8, 18); ctx.lineTo(-8, 4); ctx.lineTo(8, 4); ctx.lineTo(8, 18);
+    ctx.moveTo(-8, 4); ctx.bezierCurveTo(-8, -4, 8, -4, 8, 4);
+    // turquoise dome behind portal
+    ctx.moveTo(-6, -2); ctx.bezierCurveTo(-6, -14, 6, -14, 6, -2);
+    // minarets flanking
+    ctx.moveTo(-14, -2); ctx.lineTo(-14, -12);
+    ctx.moveTo(-14, -12); ctx.bezierCurveTo(-15, -16, -13, -16, -14, -12);
+    ctx.moveTo(-14, -16); ctx.lineTo(-14, -18);
+    ctx.moveTo(14, -2); ctx.lineTo(14, -12);
+    ctx.moveTo(14, -12); ctx.bezierCurveTo(15, -16, 13, -16, 14, -12);
+    ctx.moveTo(14, -16); ctx.lineTo(14, -18);
+    // dome finial
+    ctx.moveTo(0, -14); ctx.lineTo(0, -16);
+    ctx.stroke();
+  }
+
+  function drawDhaka(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // National Parliament House — Louis Kahn's geometric brutalist landmark
+    // base
+    ctx.moveTo(-18, 18); ctx.lineTo(-18, 6); ctx.lineTo(18, 6); ctx.lineTo(18, 18);
+    // bold geometric cutouts
+    ctx.moveTo(-14, 18); ctx.bezierCurveTo(-14, 10, -8, 10, -8, 18);
+    ctx.moveTo(8, 18); ctx.bezierCurveTo(8, 10, 14, 10, 14, 18);
+    // central monumental block
+    ctx.moveTo(-6, 18); ctx.lineTo(-6, 8); ctx.lineTo(6, 8); ctx.lineTo(6, 18);
+    // upper tier
+    ctx.moveTo(-12, 6); ctx.lineTo(-12, -4); ctx.lineTo(12, -4); ctx.lineTo(12, 6);
+    // circular cutouts (signature feature)
+    ctx.moveTo(-7, 0); ctx.bezierCurveTo(-7, -4, -3, -4, -3, 0); ctx.bezierCurveTo(-3, 4, -7, 4, -7, 0);
+    ctx.moveTo(3, 0); ctx.bezierCurveTo(3, -4, 7, -4, 7, 0); ctx.bezierCurveTo(7, 4, 3, 4, 3, 0);
+    // top
+    ctx.moveTo(-8, -4); ctx.lineTo(-8, -10); ctx.lineTo(8, -10); ctx.lineTo(8, -4);
+    ctx.stroke();
+  }
+
+  function drawDoha(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // sea
+    ctx.moveTo(-22, 16); ctx.bezierCurveTo(-12, 14, 12, 14, 22, 16);
+    // Doha skyline — distinctive twisting modern skyscrapers
+    // Aspire Tower (torch shape)
+    ctx.moveTo(-16, 14); ctx.lineTo(-16, -6); ctx.lineTo(-12, -6); ctx.lineTo(-12, 14);
+    ctx.moveTo(-16, -6); ctx.bezierCurveTo(-18, -10, -10, -10, -12, -6);
+    ctx.moveTo(-14, -10); ctx.lineTo(-14, -14);
+    // Tornado tower (curved)
+    ctx.moveTo(-6, 14); ctx.bezierCurveTo(-8, 4, -8, -4, -6, -10);
+    ctx.moveTo(0, 14); ctx.bezierCurveTo(2, 4, 2, -4, 0, -10);
+    ctx.lineTo(-6, -10);
+    // generic tall tower
+    ctx.moveTo(6, 14); ctx.lineTo(6, -8); ctx.lineTo(10, -8); ctx.lineTo(10, 14);
+    // antenna
+    ctx.moveTo(8, -8); ctx.lineTo(8, -14);
+    // generic shorter tower
+    ctx.moveTo(14, 14); ctx.lineTo(14, -2); ctx.lineTo(18, -2); ctx.lineTo(18, 14);
+    // window grid
+    for (let y = -2; y < 14; y += 4) {
+      ctx.moveTo(14, y); ctx.lineTo(18, y);
+    }
+    ctx.stroke();
+  }
+
+  function drawMuscat(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // Sultan Qaboos Grand Mosque
+    ctx.moveTo(-16, 18); ctx.lineTo(-16, 6); ctx.lineTo(16, 6); ctx.lineTo(16, 18);
+    // arches across base
+    for (let x = -12; x <= 8; x += 4) {
+      ctx.moveTo(x, 18); ctx.bezierCurveTo(x, 12, x + 4, 12, x + 4, 18);
+    }
+    // central dome
+    ctx.moveTo(-6, 6); ctx.bezierCurveTo(-6, -6, 6, -6, 6, 6);
+    // crescent finial
+    ctx.moveTo(0, -6); ctx.lineTo(0, -10);
+    ctx.moveTo(-2, -9); ctx.bezierCurveTo(-2, -12, 2, -12, 2, -9);
+    // single tall minaret (Omani style)
+    ctx.moveTo(-18, 18); ctx.lineTo(-18, -10);
+    ctx.moveTo(-19, -2); ctx.lineTo(-17, -2);
+    ctx.moveTo(-19, -6); ctx.lineTo(-17, -6);
+    // pointed top
+    ctx.moveTo(-19, -10); ctx.lineTo(-18, -14); ctx.lineTo(-17, -10);
+    // mountains in distance
+    ctx.moveTo(14, 6); ctx.lineTo(18, 0); ctx.lineTo(22, 4);
+    ctx.stroke();
+  }
+
+  function drawKuwait(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // Kuwait Towers — iconic three balls on stems
+    // tallest tower
+    ctx.moveTo(-3, 18); ctx.lineTo(-3, -6);
+    ctx.moveTo(3, 18); ctx.lineTo(3, -6);
+    // big sphere
+    ctx.moveTo(-8, -6); ctx.bezierCurveTo(-8, -16, 8, -16, 8, -6); ctx.bezierCurveTo(8, 4, -8, 4, -8, -6);
+    // smaller second sphere on lower position
+    ctx.moveTo(-3, 4); ctx.lineTo(-5, 6); ctx.lineTo(5, 6); ctx.lineTo(3, 4);
+    // small spire
+    ctx.moveTo(0, -16); ctx.lineTo(0, -20);
+    // smaller second tower
+    ctx.moveTo(-14, 18); ctx.lineTo(-14, 4);
+    ctx.moveTo(-12, 18); ctx.lineTo(-12, 4);
+    ctx.moveTo(-15, 4); ctx.bezierCurveTo(-15, -2, -11, -2, -11, 4); ctx.bezierCurveTo(-11, 8, -15, 8, -15, 4);
+    // smallest tower (just shaft)
+    ctx.moveTo(13, 18); ctx.lineTo(13, 8); ctx.lineTo(15, 8); ctx.lineTo(15, 18);
+    ctx.moveTo(13, 8); ctx.lineTo(14, 4); ctx.lineTo(15, 8);
+    ctx.stroke();
+  }
+
+  function drawAbuDhabi(ctx) {
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // Etihad Towers / capital gate skyline
+    // leaning Capital Gate (Abu Dhabi's leaning tower)
+    ctx.moveTo(-16, 18); ctx.lineTo(-12, -8);
+    ctx.moveTo(-12, 18); ctx.lineTo(-8, -8);
+    ctx.moveTo(-12, -8); ctx.lineTo(-8, -8);
+    // floor lines
+    for (let i = 0; i < 5; i++) {
+      const t = i / 5;
+      const y = 18 - t * 26;
+      const x1 = -16 + (4 * t);
+      const x2 = -12 + (4 * t);
+      ctx.moveTo(x1, y); ctx.lineTo(x2, y);
+    }
+    // generic curved tower
+    ctx.moveTo(-2, 18); ctx.bezierCurveTo(-4, 4, -4, -8, -2, -12);
+    ctx.moveTo(4, 18); ctx.bezierCurveTo(6, 4, 6, -8, 4, -12);
+    ctx.lineTo(-2, -12);
+    // tall straight tower
+    ctx.moveTo(10, 18); ctx.lineTo(10, -10); ctx.lineTo(14, -10); ctx.lineTo(14, 18);
+    // window grid
+    for (let y = -8; y < 16; y += 4) {
+      ctx.moveTo(10, y); ctx.lineTo(14, y);
+    }
+    // antenna
+    ctx.moveTo(12, -10); ctx.lineTo(12, -16);
+    ctx.stroke();
+  }
+
+  function drawTropicalIsland(ctx) {
+    // Reusable tropical-island silhouette for Maldives, Krabi, Phuket, Langkawi, Penang
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // ocean
+    ctx.moveTo(-22, 14); ctx.bezierCurveTo(-12, 12, 12, 12, 22, 14);
+    // tropical karst rock formation (typical Krabi/Phuket)
+    ctx.moveTo(-12, 12); ctx.lineTo(-10, -8); ctx.lineTo(-6, -12); ctx.lineTo(-2, -6); ctx.lineTo(0, 12);
+    // smaller karst
+    ctx.moveTo(8, 12); ctx.lineTo(10, 0); ctx.lineTo(14, -4); ctx.lineTo(16, 4); ctx.lineTo(18, 12);
+    // sun
+    ctx.moveTo(-18, -8); ctx.bezierCurveTo(-18, -14, -12, -14, -12, -8); ctx.bezierCurveTo(-12, -2, -18, -2, -18, -8);
+    // small palm on near beach
+    ctx.moveTo(4, 14); ctx.lineTo(4, 8);
+    ctx.moveTo(4, 8); ctx.bezierCurveTo(0, 6, 8, 4, 4, 8);
+    ctx.moveTo(4, 8); ctx.bezierCurveTo(8, 6, 0, 4, 4, 8);
+    ctx.stroke();
+  }
+
+  function drawHimalayanStupa(ctx) {
+    // Reusable Himalayan/Buddhist for Kathmandu (alt), Dharamshala
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // mountain backdrop
+    ctx.moveTo(-22, 12); ctx.lineTo(-14, -2); ctx.lineTo(-6, 6); ctx.lineTo(2, -6);
+    ctx.lineTo(10, 4); ctx.lineTo(22, 10);
+    // snow caps
+    ctx.moveTo(-16, 2); ctx.lineTo(-14, -2); ctx.lineTo(-12, 2);
+    ctx.moveTo(0, -2); ctx.lineTo(2, -6); ctx.lineTo(4, -2);
+    // small monastery
+    ctx.moveTo(-8, 14); ctx.lineTo(-8, 8); ctx.lineTo(8, 8); ctx.lineTo(8, 14);
+    // stupa above monastery
+    ctx.moveTo(-3, 8); ctx.bezierCurveTo(-3, 0, 3, 0, 3, 8);
+    ctx.moveTo(0, 0); ctx.lineTo(0, -10);
+    // prayer flags
+    ctx.moveTo(-6, -4); ctx.lineTo(6, -4);
+    for (let x = -5; x <= 5; x += 2) {
+      ctx.moveTo(x, -4); ctx.lineTo(x, -2);
+    }
+    ctx.stroke();
+  }
+
+  function drawIslamicHeritage(ctx) {
+    // Reusable for Ras Al Khaimah, Sharjah, Fujairah, Bahrain, Dammam
+    strokeStyle(ctx);
+    ctx.beginPath();
+    ctx.moveTo(-22, 18); ctx.lineTo(22, 18);
+    // dunes
+    ctx.moveTo(-22, 16); ctx.bezierCurveTo(-14, 14, -6, 16, 0, 14); ctx.bezierCurveTo(8, 12, 16, 16, 22, 14);
+    // mosque-style building
+    ctx.moveTo(-12, 14); ctx.lineTo(-12, 4); ctx.lineTo(12, 4); ctx.lineTo(12, 14);
+    // arches
+    ctx.moveTo(-8, 14); ctx.bezierCurveTo(-8, 8, -4, 8, -4, 14);
+    ctx.moveTo(4, 14); ctx.bezierCurveTo(4, 8, 8, 8, 8, 14);
+    // central dome
+    ctx.moveTo(-4, 4); ctx.bezierCurveTo(-4, -6, 4, -6, 4, 4);
+    // crescent
+    ctx.moveTo(0, -6); ctx.lineTo(0, -10);
+    ctx.moveTo(-2, -9); ctx.bezierCurveTo(-2, -11, 2, -11, 2, -9);
+    // minaret
+    ctx.moveTo(-14, 4); ctx.lineTo(-14, -8);
+    ctx.moveTo(-15, -2); ctx.lineTo(-13, -2);
+    ctx.moveTo(-14, -8); ctx.lineTo(-14, -10);
+    ctx.stroke();
+  }
+
+
+  // ===========================
+  // GAME STATE
+  // ===========================
+  let state = 'idle'; // idle | playing | ending
+  let plane = { x: 0, y: 0, angle: 0, targetAngle: 0 };
+  let trail = []; // array of {x, y}
+  let trailLength = 80;
+  let baseSpeed = 1.6;
+  let speed = baseSpeed;
+  let monument = null; // { mon, x, y, scale, rotation, age }
+  let visited = [];
+  let tilt = 0; // -1..1
+  let usingTouch = false;
+  let touchSide = 0; // -1, 0, 1
+  let lastTime = 0;
+  let starField = [];
+  let particles = [];
+
+  function flightNumber() {
+    const n = Math.floor(Math.random() * 999) + 100;
+    return `6E·${n}`;
+  }
+
+  function reset() {
+    plane.x = W / 2;
+    plane.y = H / 2;
+    plane.angle = -Math.PI / 2;
+    plane.targetAngle = -Math.PI / 2;
+    trail = [];
+    trailLength = 80;
+    speed = baseSpeed;
+    visited = [];
+    monument = null;
+    particles = [];
+    countEl.textContent = '0';
+    flightEl.textContent = flightNumber();
+    spawnMonument();
+    generateStarField();
+  }
+
+  function generateStarField() {
+    starField = [];
+    const count = Math.floor((W * H) / 8000);
+    for (let i = 0; i < count; i++) {
+      starField.push({
+        x: Math.random() * W,
+        y: Math.random() * H,
+        r: Math.random() * 0.6 + 0.3,
+        opacity: Math.random() * 0.15 + 0.05,
+      });
+    }
+  }
+
+  function spawnMonument() {
+    // pick from un-visited cities — prefer never-seen ones
+    let available = MONUMENTS.filter(m => !visited.find(v => v.city === m.city));
+    if (available.length === 0) available = MONUMENTS;
+
+    const mon = available[Math.floor(Math.random() * available.length)];
+
+    // place away from plane and trail
+    let x, y, attempts = 0;
+    do {
+      x = 80 + Math.random() * (W - 160);
+      y = 100 + Math.random() * (H - 200);
+      attempts++;
+    } while (attempts < 20 && Math.hypot(x - plane.x, y - plane.y) < 200);
+
+    monument = {
+      mon, x, y,
+      scale: 0,
+      rotation: (Math.random() - 0.5) * 0.15,
+      age: 0,
+      pulse: 0,
+    };
+
+    nextNameEl.textContent = mon.city;
+    nextCityEl.classList.add('visible');
+  }
+
+  // ===========================
+  // INPUT
+  // ===========================
+  function setupGyro() {
+    if (typeof DeviceOrientationEvent !== 'undefined' &&
+        typeof DeviceOrientationEvent.requestPermission === 'function') {
+      // iOS 13+
+      return DeviceOrientationEvent.requestPermission()
+        .then(res => {
+          if (res === 'granted') {
+            window.addEventListener('deviceorientation', onOrient);
+            return true;
+          }
+          return false;
+        })
+        .catch(() => false);
+    } else if ('DeviceOrientationEvent' in window) {
+      window.addEventListener('deviceorientation', onOrient);
+      return Promise.resolve(true);
+    }
+    return Promise.resolve(false);
+  }
+
+  let neutralGamma = 0;       // captured when flight starts — user's natural holding angle
+  let gammaCalibrated = false; // whether we've captured a neutral baseline
+  let lastGamma = 0;           // most recent reading
+
+  function onOrient(e) {
+    // gamma: left-right tilt in degrees, ~ -90 to 90
+    const g = e.gamma;
+    if (g === null || g === undefined) return;
+    lastGamma = g;
+    // tilt is measured RELATIVE to the user's natural holding angle (neutral)
+    // so that holding the phone slightly tilted doesn't make the plane drift
+    const delta = g - neutralGamma;
+    // normalize: ±25° from neutral maps to -1..1
+    const max = 25;
+    const t = Math.max(-1, Math.min(1, delta / max));
+    tilt = t;
+    usingTouch = false;
+  }
+
+  // Call this right when gameplay begins to lock in the neutral position
+  function calibrateGyro() {
+    neutralGamma = lastGamma || 0;
+    gammaCalibrated = true;
+  }
+
+  // touch fallback
+  function setupTouch() {
+    const handle = (e) => {
+      if (state !== 'playing') return;
+      const touch = e.touches ? e.touches[0] : e;
+      const x = touch.clientX;
+      touchSide = x < W / 2 ? -1 : 1;
+      usingTouch = true;
+      e.preventDefault();
+    };
+    const release = () => { touchSide = 0; };
+    canvas.addEventListener('touchstart', handle, { passive: false });
+    canvas.addEventListener('touchmove', handle, { passive: false });
+    canvas.addEventListener('touchend', release);
+    canvas.addEventListener('mousedown', handle);
+    canvas.addEventListener('mouseup', release);
+  }
+  setupTouch();
+
+  // keyboard for desktop testing
+  let keyDir = 0;
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft' || e.key === 'a') { keyDir = -1; usingTouch = true; }
+    if (e.key === 'ArrowRight' || e.key === 'd') { keyDir = 1; usingTouch = true; }
+  });
+  window.addEventListener('keyup', () => { keyDir = 0; });
+
+  // ===========================
+  // GAME LOOP
+  // ===========================
+  function update(dt) {
+    if (state !== 'playing') return;
+
+    // steering
+    let steer = 0;
+    if (usingTouch) {
+      steer = touchSide || keyDir;
+    } else {
+      steer = tilt;
+    }
+
+    const turnRate = 3.2; // radians/sec at full tilt
+    plane.angle += steer * turnRate * dt;
+
+    // gradually speed up — full ramp over ~90 seconds
+    speed = baseSpeed + Math.min(2.4, visited.length * 0.18);
+
+    // move
+    plane.x += Math.cos(plane.angle) * speed * dt * 60;
+    plane.y += Math.sin(plane.angle) * speed * dt * 60;
+
+    // wrap around screen edges
+    const margin = 4;
+    if (plane.x < -margin) plane.x = W + margin;
+    if (plane.x > W + margin) plane.x = -margin;
+    if (plane.y < -margin) plane.y = H + margin;
+    if (plane.y > H + margin) plane.y = -margin;
+
+    // add to trail
+    trail.push({ x: plane.x, y: plane.y, wrap: false });
+    // mark wrap points so we don't draw lines across the screen
+    if (trail.length > 1) {
+      const prev = trail[trail.length - 2];
+      const cur = trail[trail.length - 1];
+      if (Math.hypot(cur.x - prev.x, cur.y - prev.y) > 50) {
+        cur.wrap = true;
+      }
+    }
+    if (trail.length > trailLength) trail.shift();
+
+    // monument check
+    if (monument) {
+      monument.age += dt;
+      monument.scale = Math.min(1, monument.scale + dt * 4);
+      monument.pulse += dt * 2.5;
+
+      const dist = Math.hypot(plane.x - monument.x, plane.y - monument.y);
+      if (dist < 36 && monument.scale > 0.6) {
+        collectMonument();
+      }
+    }
+
+    // self-collision (skip the most recent ~30 segments — give space behind plane)
+    const safe = 30;
+    if (trail.length > safe + 10) {
+      for (let i = 0; i < trail.length - safe; i++) {
+        const seg = trail[i];
+        if (Math.hypot(plane.x - seg.x, plane.y - seg.y) < 10) {
+          gameOver();
+          return;
+        }
+      }
+    }
+
+    // particles
+    for (let i = particles.length - 1; i >= 0; i--) {
+      const p = particles[i];
+      p.life -= dt;
+      p.x += p.vx * dt * 60;
+      p.y += p.vy * dt * 60;
+      p.vx *= 0.96;
+      p.vy *= 0.96;
+      if (p.life <= 0) particles.splice(i, 1);
+    }
+  }
+
+  function collectMonument() {
+    if (state !== 'playing' || !monument) return; // hard guard against double-collection
+    const m = monument.mon;
+    const collectX = monument.x;
+    const collectY = monument.y;
+
+    // CRITICAL: clear monument immediately so next frame's collision check
+    // doesn't re-trigger this same collection 50+ times before the new
+    // monument spawns 100ms later.
+    monument = null;
+    nextCityEl.classList.remove('visible');
+
+    visited.push(m);
+    countEl.textContent = visited.length;
+
+    // burst particles
+    for (let i = 0; i < 20; i++) {
+      const a = Math.random() * Math.PI * 2;
+      const s = Math.random() * 3 + 1;
+      particles.push({
+        x: collectX, y: collectY,
+        vx: Math.cos(a) * s,
+        vy: Math.sin(a) * s,
+        life: 0.8 + Math.random() * 0.4,
+        maxLife: 1.2,
+        color: '#1a1f4a',
+      });
+    }
+
+    // grow trail
+    trailLength += 28;
+
+    // show stamp
+    // Smart display: if landmark name differs from city, show landmark + city · country.
+    // Otherwise just show city · country to avoid redundancy.
+    if (m.name && m.name !== m.city) {
+      stampNameEl.textContent = m.name;
+      stampCountryEl.textContent = `${m.city} · ${m.country}`;
+    } else {
+      stampNameEl.textContent = m.city;
+      stampCountryEl.textContent = m.country;
+    }
+    stampEl.classList.remove('pop');
+    void stampEl.offsetWidth;
+    stampEl.classList.add('pop');
+
+    // spawn next
+    setTimeout(() => spawnMonument(), 600);
+  }
+
+  // ===========================
+  // RENDER
+  // ===========================
+  function render() {
+    ctx.clearRect(0, 0, W, H);
+
+    // dotted aviation grid
+    drawGrid();
+
+    // distant star field (paper specks)
+    ctx.fillStyle = '#1a1f4a';
+    for (const s of starField) {
+      ctx.globalAlpha = s.opacity;
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+
+    // monument
+    if (monument) {
+      drawMonument();
+    }
+
+    // trail (dotted flight path)
+    drawTrail();
+
+    // particles
+    for (const p of particles) {
+      ctx.globalAlpha = (p.life / p.maxLife) * 0.7;
+      ctx.fillStyle = p.color;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+
+    // plane
+    if (state === 'playing') {
+      drawPlane();
+    }
+  }
+
+  function drawGrid() {
+    const spacing = 28;
+    ctx.fillStyle = 'rgba(26, 31, 74, 0.18)';
+    for (let x = spacing / 2; x < W; x += spacing) {
+      for (let y = spacing / 2; y < H; y += spacing) {
+        ctx.beginPath();
+        ctx.arc(x, y, 0.7, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+  }
+
+  function drawTrail() {
+    if (trail.length < 2) return;
+
+    // Dotted trail — sample evenly along the path with subtle fade-in from oldest end.
+    // Skip the most recent N points so a small gap appears between the plane's tail
+    // and the start of the trail — makes the plane read as a distinct entity.
+    const tailGap = 14;  // ~22px breathing room behind the plane
+    const drawableLength = Math.max(0, trail.length - tailGap);
+    if (drawableLength < 2) return;
+
+    ctx.fillStyle = '#1a1f4a';
+
+    const dotSpacing = 10;       // pixels between trail dots
+    const dotRadius = 2.0;
+    let accumulated = 0;
+    let lastX = trail[0].x;
+    let lastY = trail[0].y;
+    let placedIndex = 0;
+
+    for (let i = 1; i < drawableLength; i++) {
+      const p = trail[i];
+      if (p.wrap) {
+        // skip across wrap-around so we don't draw a long line through the screen
+        lastX = p.x;
+        lastY = p.y;
+        accumulated = 0;
+        continue;
+      }
+      const dx = p.x - lastX;
+      const dy = p.y - lastY;
+      const dist = Math.hypot(dx, dy);
+      if (dist === 0) continue;
+
+      let remaining = dist;
+      let stepX = dx / dist;
+      let stepY = dy / dist;
+      let cursor = dotSpacing - accumulated;
+
+      while (cursor <= remaining) {
+        const px = lastX + stepX * cursor;
+        const py = lastY + stepY * cursor;
+
+        // age-based opacity — older dots toward the start of trail are fainter
+        const age = i / drawableLength;
+        ctx.globalAlpha = 0.25 + age * 0.65;
+
+        ctx.beginPath();
+        ctx.arc(px, py, dotRadius, 0, Math.PI * 2);
+        ctx.fill();
+
+        cursor += dotSpacing;
+        placedIndex++;
+      }
+
+      accumulated = (accumulated + dist) % dotSpacing;
+      lastX = p.x;
+      lastY = p.y;
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  function drawPlane() {
+    ctx.save();
+    ctx.translate(plane.x, plane.y);
+    ctx.rotate(plane.angle + Math.PI / 2);
+
+    // Dotted plane — EXACT dot positions extracted from Figma (Globe_UI / Dotted_plane node 385:43)
+    // 20 dots, perfectly symmetric, with classic plane silhouette
+    ctx.fillStyle = '#1a1f4a';
+
+    const dots = [
+      [ 0.018, -14.862],   // nose tip
+      [-0.009, -11.698],
+      [-0.013,  -8.553],
+      [-2.253,  -6.314],
+      [ 2.226,  -6.314],
+      [-0.010,  -4.085],
+      [ 4.465,  -4.076],
+      [-4.492,  -4.075],
+      [-6.703,  -1.863],
+      [ 6.704,  -1.835],   // wingtips
+      [ 0.018,  -0.923],
+      [-8.943,   0.376],
+      [ 8.944,   0.404],   // outermost wingtips
+      [-0.013,   2.251],
+      [ 0.018,   5.405],
+      [ 0.014,   8.549],
+      [-2.225,  10.789],
+      [ 2.254,  10.789],
+      [ 4.465,  13.000],
+      [-4.464,  13.028],   // tail wing
+    ];
+
+    const scale = 1.4;
+    const dotR = 1.6;
+
+    for (const [dx, dy] of dots) {
+      ctx.beginPath();
+      ctx.arc(dx * scale, dy * scale, dotR, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    ctx.restore();
+  }
+
+  function drawMonument() {
+    const m = monument;
+    ctx.save();
+    ctx.translate(m.x, m.y);
+    ctx.scale(m.scale, m.scale);
+    ctx.rotate(m.rotation);
+
+    // pulsing halo ring
+    const pulse = (Math.sin(m.pulse) + 1) / 2;
+    ctx.strokeStyle = `rgba(26, 31, 74, ${0.15 + pulse * 0.15})`;
+    ctx.lineWidth = 1;
+    ctx.setLineDash([3, 4]);
+    ctx.beginPath();
+    ctx.arc(0, 0, 36 + pulse * 4, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // outer dot ring
+    ctx.fillStyle = 'rgba(26, 31, 74, 0.4)';
+    for (let i = 0; i < 12; i++) {
+      const a = (i / 12) * Math.PI * 2 + m.pulse * 0.3;
+      const r = 30;
+      ctx.beginPath();
+      ctx.arc(Math.cos(a) * r, Math.sin(a) * r, 0.8, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    // monument silhouette
+    m.mon.draw(ctx);
+
+    // tiny city label below
+    ctx.fillStyle = 'rgba(26, 31, 74, 0.55)';
+    ctx.font = '500 8px "JetBrains Mono", monospace';
+    ctx.textAlign = 'center';
+    ctx.fillText(m.mon.city.toUpperCase(), 0, 32);
+
+    ctx.restore();
+  }
+
+  // ===========================
+  // GAME OVER
+  // ===========================
+  function gameOver() {
+    state = 'ending';
+    hud.classList.remove('visible');
+    nextCityEl.classList.remove('visible');
+
+    // small crash effect
+    for (let i = 0; i < 30; i++) {
+      const a = Math.random() * Math.PI * 2;
+      const s = Math.random() * 4 + 1;
+      particles.push({
+        x: plane.x, y: plane.y,
+        vx: Math.cos(a) * s,
+        vy: Math.sin(a) * s,
+        life: 0.6 + Math.random() * 0.4,
+        maxLife: 1.0,
+        color: '#c8302e',
+      });
+    }
+
+    setTimeout(() => {
+      endCountEl.textContent = visited.length;
+      // build visited list
+      visitedEl.innerHTML = visited.length > 0
+        ? visited.map(v => `<span>${v.city}</span>`).join('')
+        : '<span style="font-style:normal;font-family:JetBrains Mono,monospace;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;">Ready for takeoff</span>';
+
+      endScreen.classList.remove('hidden');
+      requestAnimationFrame(() => {
+        endScreen.classList.add('show');
+      });
+
+      // enable tilt-to-replay after a short cooldown so the crash tilt doesn't trigger it
+      setTimeout(() => {
+        tiltReplayDebounce = Date.now() + 500;
+        endBaselineGamma = null; // capture fresh baseline on next orientation event
+        canReplayByTilt = gyroGranted;
+      }, 1500);
+    }, 800);
+  }
+
+  // ===========================
+  // MAIN LOOP
+  // ===========================
+  function loop(now) {
+    const dt = Math.min(0.05, (now - lastTime) / 1000);
+    lastTime = now;
+    update(dt);
+    render();
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame((t) => { lastTime = t; requestAnimationFrame(loop); });
+
+  // ===========================
+  // FLOW: start, end, replay
+  // ===========================
+  let gyroGranted = false;
+  let canReplayByTilt = false;
+
+  async function startFlight() {
+    if (state !== 'idle') return;
+    state = 'boarding'; // prevent double-fire
+    gyroGranted = await setupGyro();
+
+    startScreen.classList.add('hidden');
+    setTimeout(() => {
+      reset();
+      // Capture the user's current holding angle as "neutral" so the plane
+      // flies straight when they hold the phone however feels natural to them.
+      calibrateGyro();
+      state = 'playing';
+      hud.classList.add('visible');
+      tiltHint.classList.add('visible');
+      setTimeout(() => tiltHint.classList.add('fade-out'), 2500);
+    }, 400);
+  }
+
+  // Tap anywhere on start screen to board
+  let startTouched = false;
+  startScreen.addEventListener('touchend', (e) => {
+    e.preventDefault();
+    startTouched = true;
+    startFlight();
+    setTimeout(() => { startTouched = false; }, 500);
+  }, { passive: false });
+  startScreen.addEventListener('click', () => {
+    if (startTouched) return;
+    startFlight();
+  });
+
+  function replay() {
+    canReplayByTilt = false;
+    endScreen.classList.remove('show');
+    setTimeout(() => {
+      endScreen.classList.add('hidden');
+      reset();
+      // Recalibrate neutral position for the new flight
+      calibrateGyro();
+      state = 'playing';
+      hud.classList.add('visible');
+    }, 500);
+  }
+
+  document.getElementById('replay-btn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    replay();
+  });
+
+  // Tilt-to-replay: capture a baseline when end screen appears,
+  // then trigger when current tilt deviates significantly from THAT baseline.
+  let tiltReplayDebounce = 0;
+  let endBaselineGamma = null;
+
+  // Debug panel elements
+  const dbgGyro = document.getElementById('dbg-gyro');
+  const dbgGamma = document.getElementById('dbg-gamma');
+  const dbgBase = document.getElementById('dbg-base');
+  const dbgDelta = document.getElementById('dbg-delta');
+  const dbgFill = document.getElementById('dbg-fill');
+  const dbgPanel = document.getElementById('tilt-debug');
+  const dbgClose = document.getElementById('dbg-close');
+  let gyroEverReceived = false;
+
+  if (dbgClose) {
+    dbgClose.addEventListener('click', (e) => {
+      e.stopPropagation();
+      dbgPanel.classList.add('hidden-debug');
+    });
+  }
+
+  // Update debug panel every animation frame so we can see if anything is flowing
+  function updateDebugPanel() {
+    if (!dbgGyro) return;
+    if (!gyroEverReceived) {
+      dbgGyro.textContent = gyroGranted ? 'granted, no events yet' : 'not granted';
+      dbgGyro.style.color = '#c8302e';
+    } else {
+      dbgGyro.textContent = canReplayByTilt ? 'active' : 'gameplay only';
+      dbgGyro.style.color = '';
+    }
+  }
+
+  window.addEventListener('deviceorientation', (e) => {
+    const g = e.gamma;
+    if (g === null || g === undefined) return;
+
+    gyroEverReceived = true;
+    if (dbgGamma) dbgGamma.textContent = g.toFixed(1) + '°';
+
+    if (!canReplayByTilt) {
+      if (dbgBase) dbgBase.textContent = '—';
+      if (dbgDelta) dbgDelta.textContent = '—';
+      if (dbgFill) dbgFill.style.width = '0%';
+      return;
+    }
+    const now = Date.now();
+    if (now < tiltReplayDebounce) return;
+
+    // Capture baseline on first orientation event after end screen activates
+    if (endBaselineGamma === null) {
+      endBaselineGamma = g;
+      if (dbgBase) dbgBase.textContent = g.toFixed(1) + '°';
+      return;
+    }
+
+    if (dbgBase) dbgBase.textContent = endBaselineGamma.toFixed(1) + '°';
+
+    // Trigger on a sharp tilt CHANGE from the captured baseline
+    const delta = g - endBaselineGamma;
+    if (dbgDelta) dbgDelta.textContent = delta.toFixed(1) + '°';
+
+    // Visualize delta as a bar (50% center = 0°, ±50% = ±25°)
+    if (dbgFill) {
+      const pct = Math.min(50, Math.abs(delta) / 25 * 50);
+      const fromCenter = delta < 0 ? `right: 50%` : `left: 50%`;
+      dbgFill.style.cssText = `${fromCenter}; width: ${pct}%;`;
+      dbgFill.classList.toggle('ready', Math.abs(delta) > 22);
+    }
+
+    if (Math.abs(delta) > 25) {
+      tiltReplayDebounce = now + 1000;
+      endBaselineGamma = null; // reset for next flight
+      replay();
+    }
+  });
+
+  // Refresh the gyro status indicator periodically
+  setInterval(updateDebugPanel, 250);
+
+  // Also accept a shake gesture as fallback (for devices where tilt is held)
+  let lastAccel = { x: 0, y: 0, z: 0 };
+  let lastAccelTime = 0;
+  window.addEventListener('devicemotion', (e) => {
+    if (!canReplayByTilt) return;
+    const a = e.accelerationIncludingGravity;
+    if (!a) return;
+    const now = Date.now();
+    if (now - lastAccelTime < 100) return;
+    lastAccelTime = now;
+    const dx = a.x - lastAccel.x;
+    const dy = a.y - lastAccel.y;
+    const delta = Math.hypot(dx, dy);
+    lastAccel = { x: a.x, y: a.y, z: a.z };
+    if (delta > 18 && now > tiltReplayDebounce) {
+      tiltReplayDebounce = now + 1000;
+      replay();
+    }
+  });
+
+  // initial render
+  generateStarField();
+  render();
+})();
+</script>
+
+</body>
+</html>
